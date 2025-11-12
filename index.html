@@ -3,219 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Khadga Bahadur Shrestha - Senior Software Engineer (Mobile, Web & DevOps)">
-    <title>Khadga Bahadur Shrestha - Portfolio</title>
+    <meta name="description" content="Khadga Bahadur Shrestha - Senior Software Engineer specializing in Mobile, Web & DevOps">
+    <title>Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-content">
-                <h1 class="name">Khadga Bahadur Shrestha</h1>
-                <p class="tagline">Senior Software Engineer (Mobile, Web & DevOps)</p>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">KB</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="resume.pdf" class="nav-resume" download>Resume</a>
             </div>
-            <div class="header-actions">
-                <a href="resume.pdf" class="btn-download" download>Download PDF</a>
-            </div>
-        </header>
+        </div>
+    </nav>
 
-        <main class="main-content">
-            <section class="section about">
-                <h2 class="section-title">Profile</h2>
-                <div class="section-content">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Khadga Bahadur Shrestha</h1>
+                <p class="hero-title">Senior Software Engineer</p>
+                <p class="hero-subtitle">Mobile, Web & DevOps</p>
+                <p class="hero-description">
+                    Building scalable systems and modern applications. Passionate about clean architecture, 
+                    cloud infrastructure, and creating solutions that make a difference.
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:khadgalovecoding2016@gmail.com" class="btn-primary">Get in Touch</a>
+                    <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-container">
+                <span class="section-label">About</span>
+                <h2 class="section-title">Who I Am</h2>
+                <div class="about-content">
                     <p class="about-text">
-                        Software Engineer with 7 years of experience in developing mobile and web applications, now focusing on
-                        DevOps and cloud infrastructure engineering. Skilled in designing scalable, secure, and efficient systems by
-                        bridging development and operations through automation, containerization, and cloud-native solutions.
-                        Experienced in architecting applications using Flutter, React, Node.js, and deploying modern workloads with
-                        Kubernetes, Docker, Terraform, and AWS. Passionate about building systems that are clean in architecture,
-                        reliable in production, and simple to maintain.
+                        Software Engineer with 7 years of experience in developing mobile and web applications, 
+                        now focusing on DevOps and cloud infrastructure engineering. Skilled in designing scalable, 
+                        secure, and efficient systems by bridging development and operations through automation, 
+                        containerization, and cloud-native solutions.
+                    </p>
+                    <p class="about-text">
+                        Experienced in architecting applications using Flutter, React, Node.js, and deploying 
+                        modern workloads with Kubernetes, Docker, Terraform, and AWS. Passionate about building 
+                        systems that are clean in architecture, reliable in production, and simple to maintain.
                     </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section experience">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="section-content">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Senior Software Engineer</h3>
-                            <span class="experience-date">Aug 2024 – Present</span>
+        <!-- Experience Section -->
+        <section id="experience" class="section section-alt">
+            <div class="section-container">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Where I've Worked</h2>
+                <div class="experience-list">
+                    <div class="experience-entry">
+                        <div class="experience-meta">
+                            <h3 class="experience-role">Senior Software Engineer</h3>
+                            <span class="experience-company">Port Pro</span>
+                            <span class="experience-location">Lalitpur, Nepal</span>
+                            <span class="experience-period">Aug 2024 – Present</span>
                         </div>
-                        <p class="experience-company">Port Pro | Lalitpur, Nepal</p>
-                        <p class="experience-description">
-                            Designed and automated infrastructure with Terraform, Helm, and Kustomize for consistent deployments. Built
-                            CI/CD pipelines using GitHub Actions and Jenkins for microservices on AWS ECS (Fargate & EC2). Optimized
-                            containers reducing image size by 80%, improved deployment speed. Configured New Relic and CloudWatch
-                            for observability, and led cloud reliability and performance efforts.
-                        </p>
+                        <div class="experience-details">
+                            <p>Designed and automated infrastructure with Terraform, Helm, and Kustomize for consistent deployments. Built CI/CD pipelines using GitHub Actions and Jenkins for microservices on AWS ECS (Fargate & EC2).</p>
+                            <p>Optimized containers reducing image size by 80%, improved deployment speed. Configured New Relic and CloudWatch for observability, and led cloud reliability and performance efforts.</p>
+                        </div>
                     </div>
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Software Engineer (Mobile & Web)</h3>
-                            <span class="experience-date">Oct 2021 – Jul 2024</span>
+
+                    <div class="experience-entry">
+                        <div class="experience-meta">
+                            <h3 class="experience-role">Software Engineer (Mobile & Web)</h3>
+                            <span class="experience-company">Port Pro</span>
+                            <span class="experience-location">Lalitpur, Nepal</span>
+                            <span class="experience-period">Oct 2021 – Jul 2024</span>
                         </div>
-                        <p class="experience-company">Port Pro | Lalitpur, Nepal</p>
-                        <p class="experience-description">
-                            Developed the company's core mobile application using Flutter with Clean Architecture and TDD. Automated
-                            release pipelines for Android and iOS with CI/CD integration. Created reusable UI frameworks, optimized
-                            rendering and state management. Built full-stack features using React.js and Node.js; mentored junior
-                            developers.
-                        </p>
+                        <div class="experience-details">
+                            <p>Developed the company's core mobile application using Flutter with Clean Architecture and TDD. Automated release pipelines for Android and iOS with CI/CD integration.</p>
+                            <p>Created reusable UI frameworks, optimized rendering and state management. Built full-stack features using React.js and Node.js; mentored junior developers.</p>
+                        </div>
                     </div>
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Software Developer</h3>
-                            <span class="experience-date">Jan 2019 – Sep 2021</span>
+
+                    <div class="experience-entry">
+                        <div class="experience-meta">
+                            <h3 class="experience-role">Software Developer</h3>
+                            <span class="experience-company">Parentiv</span>
+                            <span class="experience-location">Remote</span>
+                            <span class="experience-period">Jan 2019 – Sep 2021</span>
                         </div>
-                        <p class="experience-company">Parentiv | Remote</p>
-                        <p class="experience-description">
-                            Built a Flutter app for child care and special needs management using Firebase. Architected backend with Cloud
-                            Functions and Firestore; implemented CI/CD automation. Migrated admin dashboard from React.js to Flutter
-                            Web.
-                        </p>
+                        <div class="experience-details">
+                            <p>Built a Flutter app for child care and special needs management using Firebase. Architected backend with Cloud Functions and Firestore; implemented CI/CD automation.</p>
+                            <p>Migrated admin dashboard from React.js to Flutter Web.</p>
+                        </div>
                     </div>
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Software Developer</h3>
-                            <span class="experience-date">Mar 2016 – Dec 2018</span>
+
+                    <div class="experience-entry">
+                        <div class="experience-meta">
+                            <h3 class="experience-role">Software Developer</h3>
+                            <span class="experience-company">Deltatech Nepal</span>
+                            <span class="experience-location">Biratnagar, Nepal</span>
+                            <span class="experience-period">Mar 2016 – Dec 2018</span>
                         </div>
-                        <p class="experience-company">Deltatech Nepal | Biratnagar, Nepal</p>
-                        <p class="experience-description">
-                            Developed responsive web and e-commerce applications using JavaScript, HTML/CSS, and REST APIs.
-                            Delivered full-cycle software solutions for local and international clients.
-                        </p>
+                        <div class="experience-details">
+                            <p>Developed responsive web and e-commerce applications using JavaScript, HTML/CSS, and REST APIs. Delivered full-cycle software solutions for local and international clients.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section education">
-                <h2 class="section-title">Education</h2>
-                <div class="section-content">
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h3 class="education-degree">Bachelor in Computer Science and Information Technology (BSc CSIT)</h3>
-                            <span class="education-date">2016 – 2020</span>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">What I Work With</h2>
+                <p class="skills-intro">A comprehensive toolkit for building modern, scalable applications and infrastructure.</p>
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon aws-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#FF9900"/>
+                                    <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#FF9900"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">DevOps & Cloud</h3>
                         </div>
+                        <div class="skill-items">
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Kubernetes</span>
+                            <span class="skill-item">Terraform</span>
+                            <span class="skill-item">Helm</span>
+                            <span class="skill-item">Kustomize</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon github-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12C2 16.42 4.865 20.335 8.839 21.489C9.339 21.58 9.521 21.272 9.521 21.007C9.521 20.762 9.513 19.977 9.508 19.29C6.726 19.937 6.14 18.122 6.14 18.122C5.685 16.825 5.029 16.5 5.029 16.5C4.121 15.759 5.097 15.772 5.097 15.772C6.101 15.851 6.629 16.81 6.629 16.81C7.521 18.206 8.97 17.81 9.539 17.569C9.631 16.866 9.889 16.405 10.175 16.155C7.954 15.909 5.619 15.022 5.619 10.718C5.619 9.492 6.01 8.5 6.649 7.793C6.546 7.544 6.203 6.537 6.747 5.112C6.747 5.112 7.586 4.83 9.496 6.404C10.295 6.168 11.147 6.05 12 6.047C12.853 6.05 13.705 6.168 14.504 6.404C16.414 4.83 17.253 5.112 17.253 5.112C17.797 6.537 17.454 7.544 17.351 7.793C17.99 8.5 18.381 9.49 18.381 10.718C18.381 15.028 16.04 15.908 13.813 16.153C14.172 16.475 14.483 17.053 14.483 17.937C14.483 19.243 14.465 20.312 14.465 21.006C14.465 21.275 14.644 21.587 15.152 21.488C19.138 20.333 22 16.418 22 12C22 6.477 17.523 2 12 2Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">CI/CD & Automation</h3>
+                        </div>
+                        <div class="skill-items">
+                            <span class="skill-item">GitHub Actions</span>
+                            <span class="skill-item">Jenkins</span>
+                            <span class="skill-item">CloudFormation</span>
+                            <span class="skill-item">IaC</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon flutter-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.314 0L2.3 12 6.557 16.258 18.572 4.243 14.314 0ZM11.272 18.757L7.014 23.015L2.757 18.757L7.014 14.5L11.272 18.757ZM18.586 7.414L14.328 11.672L18.586 15.93L22.843 11.672L18.586 7.414Z" fill="#02569B"/>
+                                    <path d="M18.586 7.414L14.328 11.672L11.272 18.757L7.014 14.5L14.328 7.186L18.586 7.414Z" fill="#027DFD"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Mobile Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <span class="skill-item">Flutter</span>
+                            <span class="skill-item">Dart</span>
+                            <span class="skill-item">Clean Architecture</span>
+                            <span class="skill-item">TDD</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon react-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="2" fill="#61DAFB"/>
+                                    <ellipse cx="12" cy="12" rx="11" ry="4.2" stroke="#61DAFB" stroke-width="1" fill="none"/>
+                                    <ellipse cx="12" cy="12" rx="11" ry="4.2" stroke="#61DAFB" stroke-width="1" fill="none" transform="rotate(60 12 12)"/>
+                                    <ellipse cx="12" cy="12" rx="11" ry="4.2" stroke="#61DAFB" stroke-width="1" fill="none" transform="rotate(-60 12 12)"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Web Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <span class="skill-item">React.js</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Express.js</span>
+                            <span class="skill-item">REST APIs</span>
+                            <span class="skill-item">Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon mongodb-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-1.735 1.782-2.804 4.316C7.533 6.802 6.5 9.77 6.5 12.5c0 2.23.433 4.24 1.22 5.94.36.795.8 1.5 1.3 2.1.5.6 1.05 1.1 1.65 1.5.6.4 1.25.7 1.95.9.7.2 1.45.3 2.25.3.8 0 1.55-.1 2.25-.3.7-.2 1.35-.5 1.95-.9.6-.4 1.15-.9 1.65-1.5.5-.6.94-1.305 1.3-2.1.787-1.7 1.22-3.71 1.22-5.94 0-2.73-1.033-5.698-2.307-8.06z" fill="#47A248"/>
+                                    <path d="M15.5 12.5c0 .8-.1 1.55-.3 2.25-.2.7-.5 1.35-.9 1.95-.4.6-.9 1.15-1.5 1.65-.6.5-1.305.94-2.1 1.3-.787.36-1.71.55-2.7.55-.99 0-1.913-.19-2.7-.55-.795-.36-1.5-.8-2.1-1.3-.6-.5-1.1-1.05-1.5-1.65-.4-.6-.7-1.25-.9-1.95-.2-.7-.3-1.45-.3-2.25 0-.8.1-1.55.3-2.25.2-.7.5-1.35.9-1.95.4-.6.9-1.15 1.5-1.65.6-.5 1.305-.94 2.1-1.3.787-.36 1.71-.55 2.7-.55.99 0 1.913.19 2.7.55.795.36 1.5.8 2.1 1.3.6.5 1.1 1.05 1.5 1.65.4.6.7 1.25.9 1.95.2.7.3 1.45.3 2.25z" fill="#13AA52"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Databases</h3>
+                        </div>
+                        <div class="skill-items">
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">Firestore</span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">BigQuery</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon prometheus-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#E6522C"/>
+                                    <circle cx="12" cy="12" r="8" stroke="#E6522C" stroke-width="1.5" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="skill-category-title">Monitoring & Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <span class="skill-item">New Relic</span>
+                            <span class="skill-item">CloudWatch</span>
+                            <span class="skill-item">Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications">
+                    <h3 class="certifications-title">Certifications</h3>
+                    <div class="certification-cards">
+                        <div class="certification-card">
+                            <div class="certification-icon aws-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#FF9900"/>
+                                    <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#FF9900"/>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-name">AWS Solutions Architect</h4>
+                                <p class="certification-level">Associate</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon aws-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#FF9900"/>
+                                    <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#FF9900"/>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-name">AWS Cloud Practitioner</h4>
+                                <p class="certification-level">Foundational</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon kubernetes-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" fill="#326CE5"/>
+                                    <path d="M12 6L8 10H12V14H8L12 18L16 14H12V10H16L12 6Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-name">Kubernetes</h4>
+                                <p class="certification-level">Absolute Beginners</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon mongodb-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-1.735 1.782-2.804 4.316C7.533 6.802 6.5 9.77 6.5 12.5c0 2.23.433 4.24 1.22 5.94.36.795.8 1.5 1.3 2.1.5.6 1.05 1.1 1.65 1.5.6.4 1.25.7 1.95.9.7.2 1.45.3 2.25.3.8 0 1.55-.1 2.25-.3.7-.2 1.35-.5 1.95-.9.6-.4 1.15-.9 1.65-1.5.5-.6.94-1.305 1.3-2.1.787-1.7 1.22-3.71 1.22-5.94 0-2.73-1.033-5.698-2.307-8.06z" fill="#47A248"/>
+                                    <path d="M15.5 12.5c0 .8-.1 1.55-.3 2.25-.2.7-.5 1.35-.9 1.95-.4.6-.9 1.15-1.5 1.65-.6.5-1.305.94-2.1 1.3-.787.36-1.71.55-2.7.55-.99 0-1.913-.19-2.7-.55-.795-.36-1.5-.8-2.1-1.3-.6-.5-1.1-1.05-1.5-1.65-.4-.6-.7-1.25-.9-1.95-.2-.7-.3-1.45-.3-2.25 0-.8.1-1.55.3-2.25.2-.7.5-1.35.9-1.95.4-.6.9-1.15 1.5-1.65.6-.5 1.305-.94 2.1-1.3.787-.36 1.71-.55 2.7-.55.99 0 1.913.19 2.7.55.795.36 1.5.8 2.1 1.3.6.5 1.1 1.05 1.5 1.65.4.6.7 1.25.9 1.95.2.7.3 1.45.3 2.25z" fill="#13AA52"/>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-name">MongoDB</h4>
+                                <p class="certification-level">CRUD Operations</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon terraform-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" fill="#623CE4"/>
+                                    <path d="M8 8H16V10H8V8Z" fill="white"/>
+                                    <path d="M8 12H16V14H8V12Z" fill="white"/>
+                                    <path d="M8 16H14V18H8V16Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-name">Terraform</h4>
+                                <p class="certification-level">Basics Training</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon aws-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#FF9900"/>
+                                    <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#FF9900"/>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-name">AWS Educate</h4>
+                                <p class="certification-level">Cloud 101</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section section-alt">
+            <div class="section-container">
+                <span class="section-label">Education</span>
+                <h2 class="section-title">Background</h2>
+                <div class="education-content">
+                    <div class="education-entry">
+                        <h3 class="education-degree">Bachelor in Computer Science and Information Technology</h3>
                         <p class="education-institution">Tribhuvan University, Biratnagar</p>
+                        <p class="education-period">2016 – 2020</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section skills">
-                <h2 class="section-title">Technical Expertise</h2>
-                <div class="section-content">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">DevOps & Cloud</h4>
-                            <ul class="skill-list">
-                                <li>AWS (ECS, EC2, S3, CloudFront, API Gateway)</li>
-                                <li>Docker</li>
-                                <li>Kubernetes</li>
-                                <li>Terraform</li>
-                                <li>Helm</li>
-                                <li>Kustomize</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">CI/CD & Automation</h4>
-                            <ul class="skill-list">
-                                <li>GitHub Actions</li>
-                                <li>Jenkins</li>
-                                <li>AWS CloudFormation</li>
-                                <li>IaC</li>
-                                <li>Automated Deployment</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">Mobile Development</h4>
-                            <ul class="skill-list">
-                                <li>Flutter</li>
-                                <li>Dart</li>
-                                <li>Clean Architecture</li>
-                                <li>TDD</li>
-                                <li>State Management</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">Web Development</h4>
-                            <ul class="skill-list">
-                                <li>React.js</li>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                                <li>REST APIs</li>
-                                <li>Firebase</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">Databases</h4>
-                            <ul class="skill-list">
-                                <li>PostgreSQL</li>
-                                <li>MongoDB</li>
-                                <li>Firebase Firestore</li>
-                                <li>Redis</li>
-                                <li>BigQuery</li>
-                                <li>TimeScale</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">Monitoring & Reliability</h4>
-                            <ul class="skill-list">
-                                <li>New Relic</li>
-                                <li>AWS CloudWatch</li>
-                                <li>Prometheus</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4 class="skill-category-title">Security & Infrastructure</h4>
-                            <ul class="skill-list">
-                                <li>IAM</li>
-                                <li>Secrets Management</li>
-                                <li>DR Planning</li>
-                                <li>System Hardening</li>
-                            </ul>
+        <!-- Contact Section -->
+        <section id="contact" class="section section-alt">
+            <div class="section-container">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <div class="contact-grid">
+                        <a href="mailto:khadgalovecoding2016@gmail.com" class="contact-card">
+                            <div class="contact-card-icon email-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3 class="contact-card-title">Email</h3>
+                                <p class="contact-card-value">khadgalovecoding2016@gmail.com</p>
+                            </div>
+                            <div class="contact-card-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="tel:+9779811013594" class="contact-card">
+                            <div class="contact-card-icon phone-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3 class="contact-card-title">Phone</h3>
+                                <p class="contact-card-value">+977 9811013594</p>
+                            </div>
+                            <div class="contact-card-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/kodega2016" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon linkedin-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.3049 12.5851C15.5725 12.8526 15.72 13.2087 15.72 13.58V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3 class="contact-card-title">LinkedIn</h3>
+                                <p class="contact-card-value">linkedin.com/in/kodega2016</p>
+                            </div>
+                            <div class="contact-card-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon github-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21C9.5 20.77 9.5 20.14 9.5 19.31C6.73 19.91 6.14 18.07 6.14 18.07C5.68 16.81 5.03 16.5 5.03 16.5C4.12 15.88 5.1 15.9 5.1 15.9C6.1 15.97 6.63 16.93 6.63 16.93C7.5 18.45 8.97 18 9.54 17.76C9.63 17.11 9.89 16.67 10.17 16.42C7.95 16.17 5.62 15.31 5.62 11.5C5.62 10.39 6 9.5 6.65 8.79C6.55 8.54 6.2 7.5 6.75 6.15C6.75 6.15 7.59 5.88 9.5 7.17C10.29 6.95 11.15 6.84 12 6.84C12.85 6.84 13.71 6.95 14.5 7.17C16.41 5.88 17.25 6.15 17.25 6.15C17.8 7.5 17.45 8.54 17.35 8.79C18 9.5 18.38 10.39 18.38 11.5C18.38 15.32 16.04 16.16 13.81 16.41C14.17 16.72 14.5 17.33 14.5 18.26C14.5 19.6 14.5 20.68 14.5 21C14.5 21.27 14.66 21.59 15.16 21.5C19.14 20.16 22 16.42 22 12C22 6.48 17.52 2 12 2Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3 class="contact-card-title">GitHub</h3>
+                                <p class="contact-card-value">github.com/kodega2016</p>
+                            </div>
+                            <div class="contact-card-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon location-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h3 class="contact-card-title">Location</h3>
+                                <p class="contact-card-value">Madhumalla, Morang, Nepal</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section class="section certifications">
-                <h2 class="section-title">Certifications</h2>
-                <div class="section-content">
-                    <ul class="certification-list">
-                        <li>AWS Certified Solutions Architect – Associate</li>
-                        <li>AWS Certified Cloud Practitioner</li>
-                        <li>Kubernetes for the Absolute Beginners (Hands-on)</li>
-                        <li>MongoDB CRUD Operations in Node.js</li>
-                        <li>Terraform Basics Training</li>
-                        <li>AWS Educate: Introduction to Cloud 101</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="section contact">
-                <h2 class="section-title">Contact</h2>
-                <div class="section-content">
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> <a href="mailto:khadgalovecoding2016@gmail.com">khadgalovecoding2016@gmail.com</a></p>
-                        <p><strong>Phone:</strong> <a href="tel:+9779811013594">+977 9811013594</a></p>
-                        <p><strong>Location:</strong> Madhumalla, Morang, Nepal</p>
-                        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kodega2016" target="_blank" rel="noopener noreferrer">linkedin.com/in/kodega2016</a></p>
-                        <p><strong>GitHub:</strong> <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer">github.com/kodega2016</a></p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
+    <footer class="footer">
+        <div class="footer-content">
             <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-

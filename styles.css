@@ -7,10 +7,10 @@
 
 body {
     font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', 'URW Palladio L', 'Century Schoolbook L', serif;
-    line-height: 1.7;
+    line-height: 1.65;
     color: #1f1f1f;
     background-color: #fefefe;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 /* Container - 80% width, centered */
@@ -23,8 +23,8 @@ body {
 
 /* Navigation */
 nav {
-    padding: 35px 0 20px 0;
-    margin-bottom: 50px;
+    padding: 30px 0 18px 0;
+    margin-bottom: 45px;
     position: relative;
 }
 
@@ -46,13 +46,13 @@ nav .container {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     text-decoration: none;
     color: #1f1f1f;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     position: relative;
-    padding-left: 18px;
+    padding-left: 16px;
 }
 
 .logo::before {
@@ -61,24 +61,24 @@ nav .container {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 2px;
-    height: 24px;
+    width: 1.5px;
+    height: 20px;
     background: #1f1f1f;
 }
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 28px;
     align-items: center;
 }
 
 .nav-links a {
     color: #1f1f1f;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     position: relative;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     transition: all 0.3s ease;
 }
 
@@ -91,20 +91,20 @@ nav .container {
 }
 
 .nav-links a:last-child {
-    margin-left: 20px;
-    padding-left: 20px;
+    margin-left: 18px;
+    padding-left: 18px;
     border-left: 1px solid #e8e8e8;
     text-transform: none;
     letter-spacing: 0;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* Hero Section */
 .hero {
-    padding: 0 0 70px 0;
+    padding: 0 0 60px 0;
     text-align: left;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .hero::before {
@@ -113,18 +113,18 @@ nav .container {
     left: 0;
     top: 0;
     width: 1px;
-    height: 80px;
+    height: 70px;
     background: #e8e8e8;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 16px;
+    font-size: 42px;
+    margin-bottom: 14px;
     font-weight: normal;
     color: #1f1f1f;
     line-height: 1.2;
-    letter-spacing: -0.5px;
-    padding-left: 32px;
+    letter-spacing: -0.3px;
+    padding-left: 28px;
     position: relative;
 }
 
@@ -133,33 +133,33 @@ nav .container {
     position: absolute;
     left: 0;
     top: 0;
-    width: 3px;
-    height: 48px;
+    width: 2px;
+    height: 42px;
     background: #1f1f1f;
 }
 
 .hero .subtitle {
-    font-size: 17px;
+    font-size: 15px;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: normal;
     font-style: normal;
-    padding-left: 32px;
-    letter-spacing: 0.3px;
+    padding-left: 28px;
+    letter-spacing: 0.2px;
 }
 
 .hero .description {
-    font-size: 16px;
+    font-size: 15px;
     color: #444;
-    margin: 32px 0 24px 0;
+    margin: 28px 0 20px 0;
     max-width: 680px;
-    line-height: 1.8;
-    padding-left: 32px;
+    line-height: 1.75;
+    padding-left: 28px;
     border-left: none;
 }
 
 .hero .description:last-of-type {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
 }
 
 .hero-meta {
@@ -185,21 +185,21 @@ nav .container {
 }
 
 .hero .links {
-    margin-top: 36px;
-    padding-left: 32px;
+    margin-top: 32px;
+    padding-left: 28px;
     display: flex;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .hero .links a {
     color: #1f1f1f;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 10px;
     position: relative;
-    padding: 6px 0;
+    padding: 5px 0;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
     transition: all 0.3s ease;
 }
 
@@ -224,16 +224,16 @@ nav .container {
 
 /* Sections */
 .section {
-    padding: 50px 0;
+    padding: 45px 0;
     clear: both;
 }
 
 .section h2 {
-    font-size: 12px;
-    margin-bottom: 32px;
+    font-size: 11px;
+    margin-bottom: 28px;
     font-weight: normal;
     color: #888;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     position: relative;
     display: block;
     text-transform: uppercase;
@@ -248,9 +248,9 @@ nav .container {
 }
 
 .section h3 {
-    font-size: 22px;
-    margin-top: 28px;
-    margin-bottom: 14px;
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 12px;
     font-weight: normal;
     color: #1f1f1f;
     letter-spacing: 0px;
@@ -258,26 +258,26 @@ nav .container {
 }
 
 .section p {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: #444;
     text-align: left;
-    line-height: 1.8;
+    line-height: 1.75;
     max-width: 750px;
     font-size: 15px;
 }
 
 .section ul {
-    margin-left: 35px;
-    margin-bottom: 28px;
+    margin-left: 32px;
+    margin-bottom: 24px;
     list-style: none;
     max-width: 750px;
 }
 
 .section ul li {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: #444;
     position: relative;
-    padding-left: 25px;
+    padding-left: 22px;
     line-height: 1.7;
     font-size: 15px;
 }
@@ -293,11 +293,11 @@ nav .container {
 
 /* Experience */
 .experience-item {
-    margin-bottom: 42px;
-    padding-bottom: 42px;
+    margin-bottom: 38px;
+    padding-bottom: 38px;
     position: relative;
-    padding-left: 26px;
-    border-left: 2px solid #e8e8e8;
+    padding-left: 24px;
+    border-left: 1.5px solid #e8e8e8;
 }
 
 .experience-item:last-child {
@@ -308,9 +308,9 @@ nav .container {
 
 .experience-item h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-style: normal;
-    font-size: 20px;
+    font-size: 19px;
     text-transform: none;
     letter-spacing: 0px;
 }
@@ -318,15 +318,15 @@ nav .container {
 .company {
     color: #666;
     font-style: italic;
-    margin-bottom: 8px;
-    font-size: 16px;
+    margin-bottom: 6px;
+    font-size: 15px;
     text-transform: none;
 }
 
 .period {
     color: #888;
-    font-size: 14px;
-    margin-bottom: 16px;
+    font-size: 13px;
+    margin-bottom: 14px;
     font-style: italic;
     display: inline-block;
     padding: 0;
@@ -336,11 +336,11 @@ nav .container {
 
 /* Projects */
 .project-item {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 38px;
+    padding-bottom: 38px;
     position: relative;
-    padding-left: 26px;
-    border-left: 2px solid #e8e8e8;
+    padding-left: 24px;
+    border-left: 1.5px solid #e8e8e8;
 }
 
 .project-item:last-child {
@@ -351,8 +351,8 @@ nav .container {
 
 .project-item h3 {
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 8px;
+    font-size: 19px;
     text-transform: none;
     letter-spacing: 0px;
 }
@@ -368,19 +368,19 @@ nav .container {
 
 .project-meta {
     color: #888;
-    font-size: 14px;
-    margin-bottom: 14px;
+    font-size: 13px;
+    margin-bottom: 12px;
     font-style: italic;
     text-transform: none;
 }
 
 /* Blogs */
 .blog-item {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 38px;
+    padding-bottom: 38px;
     position: relative;
-    padding-left: 26px;
-    border-left: 2px solid #e8e8e8;
+    padding-left: 24px;
+    border-left: 1.5px solid #e8e8e8;
 }
 
 .blog-item:last-child {
@@ -391,8 +391,8 @@ nav .container {
 
 .blog-item h3 {
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 8px;
+    font-size: 19px;
     text-transform: none;
     letter-spacing: 0px;
 }
@@ -408,8 +408,8 @@ nav .container {
 
 .blog-meta {
     color: #888;
-    font-size: 14px;
-    margin-bottom: 14px;
+    font-size: 13px;
+    margin-bottom: 12px;
     font-style: italic;
     text-transform: none;
 }
@@ -427,14 +427,14 @@ a:hover {
 
 /* Footer */
 footer {
-    padding: 50px 0;
-    margin-top: 60px;
+    padding: 45px 0;
+    margin-top: 55px;
     text-align: center;
 }
 
 footer p {
     color: #888;
-    font-size: 13px;
+    font-size: 12px;
     font-style: italic;
 }
 

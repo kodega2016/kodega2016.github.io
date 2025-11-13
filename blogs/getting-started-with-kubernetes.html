@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Kubernetes - Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=PT+Sans:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#experience">Experience</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#blogs">Blogs</a>
+                <a href="/#skills">Skills</a>
+                <a href="/#contact">Contact</a>
+                <a href="/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="section">
+            <div class="container">
+                <div style="margin-bottom: 40px;">
+                    <a href="/#blogs" style="color: #888; text-decoration: none;">← back to blogs</a>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-transform: lowercase;">Getting Started with Kubernetes</h1>
+                <p class="blog-meta" style="margin-bottom: 40px;">DevOps / Kubernetes / January 2024</p>
+
+                <div style="max-width: 800px;">
+                    <h2>Introduction</h2>
+                    <p>
+                        Kubernetes has become the de-facto standard for container orchestration. Whether you're deploying 
+                        microservices, managing complex applications, or scaling your infrastructure, Kubernetes provides 
+                        the tools and abstractions needed to run containerized applications efficiently.
+                    </p>
+
+                    <h2>What is Kubernetes?</h2>
+                    <p>
+                        Kubernetes (often abbreviated as K8s) is an open-source container orchestration platform that 
+                        automates the deployment, scaling, and management of containerized applications. Originally 
+                        developed by Google, it's now maintained by the Cloud Native Computing Foundation (CNCF).
+                    </p>
+
+                    <h2>Core Concepts</h2>
+                    
+                    <h3>Pods</h3>
+                    <p>
+                        A Pod is the smallest deployable unit in Kubernetes. It represents a single instance of a running 
+                        process in your cluster. Pods can contain one or more containers that share storage and network resources.
+                    </p>
+
+                    <h3>Services</h3>
+                    <p>
+                        Services provide a stable network endpoint to access your Pods. They abstract away the complexity 
+                        of Pod IP addresses, which can change as Pods are created and destroyed.
+                    </p>
+
+                    <h3>Deployments</h3>
+                    <p>
+                        Deployments manage the creation and updating of Pods. They provide declarative updates for Pods 
+                        and ReplicaSets, allowing you to describe the desired state of your application.
+                    </p>
+
+                    <h2>Getting Started</h2>
+                    <p>
+                        To begin with Kubernetes, you'll need:
+                    </p>
+                    <ul>
+                        <li>A Kubernetes cluster (local with Minikube/Kind, or cloud-based like EKS, GKE, AKS)</li>
+                        <li>kubectl command-line tool installed</li>
+                        <li>Basic understanding of containers and Docker</li>
+                    </ul>
+
+                    <h2>Basic Commands</h2>
+                    <p>
+                        Here are some essential kubectl commands to get you started:
+                    </p>
+                    <ul>
+                        <li><code>kubectl get pods</code> - List all pods</li>
+                        <li><code>kubectl apply -f deployment.yaml</code> - Apply a configuration file</li>
+                        <li><code>kubectl describe pod &lt;pod-name&gt;</code> - Get detailed information about a pod</li>
+                        <li><code>kubectl logs &lt;pod-name&gt;</code> - View pod logs</li>
+                    </ul>
+
+                    <h2>Best Practices</h2>
+                    <ul>
+                        <li>Always use Deployments instead of creating Pods directly</li>
+                        <li>Define resource requests and limits for your containers</li>
+                        <li>Use ConfigMaps and Secrets for configuration management</li>
+                        <li>Implement health checks with liveness and readiness probes</li>
+                        <li>Use namespaces to organize resources</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Kubernetes can seem overwhelming at first, but understanding the core concepts and starting with 
+                        simple deployments will help you build confidence. As you progress, you'll discover more advanced 
+                        features like StatefulSets, DaemonSets, and Custom Resource Definitions that enable complex application 
+                        architectures.
+                    </p>
+
+                    <p>
+                        Remember, the Kubernetes ecosystem is vast and constantly evolving. Start small, experiment, and 
+                        gradually incorporate more advanced features as your needs grow.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+

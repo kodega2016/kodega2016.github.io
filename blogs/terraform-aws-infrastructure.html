@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure as Code with Terraform and AWS - Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=PT+Sans:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#experience">Experience</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#blogs">Blogs</a>
+                <a href="/#skills">Skills</a>
+                <a href="/#contact">Contact</a>
+                <a href="/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="section">
+            <div class="container">
+                <div style="margin-bottom: 40px;">
+                    <a href="/#blogs" style="color: #888; text-decoration: none;">← back to blogs</a>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-transform: lowercase;">Infrastructure as Code with Terraform and AWS</h1>
+                <p class="blog-meta" style="margin-bottom: 40px;">DevOps / Terraform / November 2023</p>
+
+                <div style="max-width: 800px;">
+                    <h2>What is Infrastructure as Code?</h2>
+                    <p>
+                        Infrastructure as Code (IaC) is the practice of managing and provisioning infrastructure through 
+                        machine-readable definition files, rather than through manual configuration. Terraform is one of 
+                        the most popular tools for implementing IaC, especially with cloud providers like AWS.
+                    </p>
+
+                    <h2>Why Terraform?</h2>
+                    <p>
+                        Terraform offers several advantages:
+                    </p>
+                    <ul>
+                        <li>Declarative configuration - describe what you want, not how to get it</li>
+                        <li>Multi-cloud support - not limited to AWS</li>
+                        <li>State management - tracks infrastructure changes</li>
+                        <li>Plan and apply workflow - preview changes before applying</li>
+                        <li>Large provider ecosystem</li>
+                    </ul>
+
+                    <h2>Basic Concepts</h2>
+                    
+                    <h3>Providers</h3>
+                    <p>
+                        Providers are plugins that Terraform uses to interact with cloud platforms. For AWS, you configure 
+                        the AWS provider with your credentials and region.
+                    </p>
+
+                    <h3>Resources</h3>
+                    <p>
+                        Resources are the infrastructure components you want to create. Examples include EC2 instances, 
+                        S3 buckets, VPCs, and IAM roles.
+                    </p>
+
+                    <h3>State</h3>
+                    <p>
+                        Terraform maintains a state file that tracks the current state of your infrastructure. This allows 
+                        Terraform to determine what changes need to be made.
+                    </p>
+
+                    <h2>Getting Started</h2>
+                    <p>
+                        To begin using Terraform with AWS:
+                    </p>
+                    <ol>
+                        <li>Install Terraform on your machine</li>
+                        <li>Configure AWS credentials (via AWS CLI or environment variables)</li>
+                        <li>Create a main.tf file with provider and resource definitions</li>
+                        <li>Run <code>terraform init</code> to initialize</li>
+                        <li>Run <code>terraform plan</code> to preview changes</li>
+                        <li>Run <code>terraform apply</code> to create resources</li>
+                    </ol>
+
+                    <h2>Best Practices</h2>
+                    <ul>
+                        <li>Use remote state (S3 backend) for team collaboration</li>
+                        <li>Organize code into modules for reusability</li>
+                        <li>Use variables for configuration values</li>
+                        <li>Tag all resources appropriately</li>
+                        <li>Use workspaces for environment management</li>
+                        <li>Version control your Terraform code</li>
+                        <li>Review plans before applying in production</li>
+                    </ul>
+
+                    <h2>Advanced Patterns</h2>
+                    <p>
+                        As your infrastructure grows, consider:
+                    </p>
+                    <ul>
+                        <li><strong>Modules:</strong> Reusable components for common patterns</li>
+                        <li><strong>Workspaces:</strong> Manage multiple environments</li>
+                        <li><strong>Data Sources:</strong> Reference existing resources</li>
+                        <li><strong>Outputs:</strong> Share information between modules</li>
+                        <li><strong>Remote State:</strong> Share state between configurations</li>
+                    </ul>
+
+                    <h2>Common Challenges</h2>
+                    <ul>
+                        <li>State file conflicts in team environments</li>
+                        <li>Managing secrets and sensitive data</li>
+                        <li>Handling resource dependencies</li>
+                        <li>Dealing with provider limitations</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Terraform with AWS provides a powerful way to manage infrastructure. Start with simple resources, 
+                        gradually adopt best practices, and scale your infrastructure management as your needs grow. The 
+                        investment in learning Terraform pays off through improved reliability, reproducibility, and team collaboration.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+

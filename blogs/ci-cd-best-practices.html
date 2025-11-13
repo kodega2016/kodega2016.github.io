@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Best Practices for Modern Applications - Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=PT+Sans:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#experience">Experience</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#blogs">Blogs</a>
+                <a href="/#skills">Skills</a>
+                <a href="/#contact">Contact</a>
+                <a href="/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="section">
+            <div class="container">
+                <div style="margin-bottom: 40px;">
+                    <a href="/#blogs" style="color: #888; text-decoration: none;">← back to blogs</a>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-transform: lowercase;">CI/CD Best Practices for Modern Applications</h1>
+                <p class="blog-meta" style="margin-bottom: 40px;">DevOps / CI/CD / October 2023</p>
+
+                <div style="max-width: 800px;">
+                    <h2>Introduction</h2>
+                    <p>
+                        Continuous Integration and Continuous Deployment (CI/CD) are essential practices for modern software 
+                        development. They enable teams to deliver code changes more frequently and reliably. This article 
+                        covers best practices for implementing effective CI/CD pipelines.
+                    </p>
+
+                    <h2>Continuous Integration Best Practices</h2>
+                    
+                    <h3>Automate Everything</h3>
+                    <p>
+                        Every step of your build, test, and deployment process should be automated. Manual steps introduce 
+                        errors and slow down the delivery process.
+                    </p>
+
+                    <h3>Run Tests Early and Often</h3>
+                    <p>
+                        Run unit tests, integration tests, and linting on every commit. Catch issues as early as possible 
+                        to reduce the cost of fixing them.
+                    </p>
+
+                    <h3>Keep Builds Fast</h3>
+                    <p>
+                        Optimize your pipeline to complete as quickly as possible. Use parallelization, caching, and 
+                        incremental builds. Fast feedback loops improve developer productivity.
+                    </p>
+
+                    <h3>Fail Fast</h3>
+                    <p>
+                        Structure your pipeline so that the most likely failures happen first. Run quick checks (linting, 
+                        unit tests) before expensive operations (integration tests, deployments).
+                    </p>
+
+                    <h2>Continuous Deployment Best Practices</h2>
+                    
+                    <h3>Use Feature Flags</h3>
+                    <p>
+                        Feature flags allow you to deploy code without immediately exposing it to users. This enables 
+                        safer deployments and easier rollbacks.
+                    </p>
+
+                    <h3>Implement Blue-Green Deployments</h3>
+                    <p>
+                        Blue-green deployments maintain two identical production environments. Switch traffic between them 
+                        for zero-downtime deployments and instant rollbacks.
+                    </p>
+
+                    <h3>Monitor Deployments</h3>
+                    <p>
+                        Monitor your application after deployment. Set up alerts for error rates, performance metrics, and 
+                        business KPIs. Automated rollback triggers can prevent issues from affecting users.
+                    </p>
+
+                    <h3>Version Everything</h3>
+                    <p>
+                        Tag your releases and maintain a changelog. This makes it easier to track what was deployed when 
+                        and enables precise rollbacks if needed.
+                    </p>
+
+                    <h2>Pipeline Design</h2>
+                    <p>
+                        A well-designed pipeline typically includes these stages:
+                    </p>
+                    <ul>
+                        <li><strong>Build:</strong> Compile code and create artifacts</li>
+                        <li><strong>Test:</strong> Run automated tests</li>
+                        <li><strong>Security Scan:</strong> Check for vulnerabilities</li>
+                        <li><strong>Deploy to Staging:</strong> Test in production-like environment</li>
+                        <li><strong>Integration Tests:</strong> Validate in staging</li>
+                        <li><strong>Deploy to Production:</strong> Release to users</li>
+                    </ul>
+
+                    <h2>GitHub Actions Tips</h2>
+                    <ul>
+                        <li>Use matrix builds for testing multiple versions</li>
+                        <li>Cache dependencies to speed up builds</li>
+                        <li>Use secrets for sensitive information</li>
+                        <li>Reuse workflows and actions to avoid duplication</li>
+                        <li>Set up branch protection rules</li>
+                    </ul>
+
+                    <h2>Jenkins Best Practices</h2>
+                    <ul>
+                        <li>Use Jenkinsfile for pipeline as code</li>
+                        <li>Organize jobs using folders</li>
+                        <li>Use shared libraries for common functionality</li>
+                        <li>Implement proper credential management</li>
+                        <li>Monitor build health and resource usage</li>
+                    </ul>
+
+                    <h2>Common Pitfalls to Avoid</h2>
+                    <ul>
+                        <li>Running all tests sequentially instead of in parallel</li>
+                        <li>Not cleaning up old artifacts and containers</li>
+                        <li>Hardcoding configuration values</li>
+                        <li>Skipping security scans</li>
+                        <li>Not having rollback procedures</li>
+                        <li>Deploying directly to production without staging</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Effective CI/CD pipelines are crucial for modern software development. Start with the basics - 
+                        automate your builds and tests, then gradually add more sophisticated practices like automated 
+                        deployments and monitoring. Remember, the goal is to reduce risk and increase confidence in your 
+                        deployments while maintaining development velocity.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+

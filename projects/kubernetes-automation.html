@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Infrastructure Automation - Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=PT+Sans:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#experience">Experience</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#blogs">Blogs</a>
+                <a href="/#skills">Skills</a>
+                <a href="/#contact">Contact</a>
+                <a href="/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="section">
+            <div class="container">
+                <div style="margin-bottom: 40px;">
+                    <a href="/#projects" style="color: #888; text-decoration: none;">← back to projects</a>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-transform: lowercase;">Kubernetes Infrastructure Automation</h1>
+                <p class="project-meta" style="margin-bottom: 40px;">DevOps / Infrastructure / 2024</p>
+
+                <div style="max-width: 800px;">
+                    <h2>Overview</h2>
+                    <p>
+                        This project involved automating Kubernetes cluster management using Infrastructure as Code (IaC) principles. 
+                        The goal was to create a scalable, maintainable infrastructure setup that could be version-controlled and 
+                        deployed consistently across multiple environments.
+                    </p>
+
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>Terraform for infrastructure provisioning</li>
+                        <li>Helm charts for Kubernetes application deployment</li>
+                        <li>Kustomize for environment-specific configurations</li>
+                        <li>GitHub Actions for CI/CD automation</li>
+                        <li>AWS EKS for managed Kubernetes clusters</li>
+                    </ul>
+
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Automated cluster provisioning with Terraform</li>
+                        <li>Multi-environment support (dev, staging, production)</li>
+                        <li>Helm-based application deployments</li>
+                        <li>Automated CI/CD pipelines for infrastructure changes</li>
+                        <li>Infrastructure versioning and rollback capabilities</li>
+                    </ul>
+
+                    <h2>Challenges & Solutions</h2>
+                    <p>
+                        One of the main challenges was managing different configurations across environments while maintaining 
+                        consistency. This was solved by using Kustomize overlays that allowed environment-specific customizations 
+                        while keeping a common base configuration.
+                    </p>
+
+                    <p>
+                        Another challenge was ensuring security best practices. I implemented RBAC policies, network policies, 
+                        and secrets management using AWS Secrets Manager integrated with Kubernetes.
+                    </p>
+
+                    <h2>Results</h2>
+                    <p>
+                        The automation reduced deployment time from hours to minutes. Infrastructure changes could now be 
+                        reviewed through pull requests, ensuring better collaboration and reducing human errors. The setup 
+                        also enabled quick disaster recovery through infrastructure recreation from code.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+

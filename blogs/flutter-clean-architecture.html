@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementing Clean Architecture in Flutter - Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=PT+Sans:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#experience">Experience</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#blogs">Blogs</a>
+                <a href="/#skills">Skills</a>
+                <a href="/#contact">Contact</a>
+                <a href="/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="section">
+            <div class="container">
+                <div style="margin-bottom: 40px;">
+                    <a href="/#blogs" style="color: #888; text-decoration: none;">← back to blogs</a>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-transform: lowercase;">Implementing Clean Architecture in Flutter</h1>
+                <p class="blog-meta" style="margin-bottom: 40px;">Mobile Development / Flutter / December 2023</p>
+
+                <div style="max-width: 800px;">
+                    <h2>Introduction</h2>
+                    <p>
+                        Clean Architecture is a software design philosophy that emphasizes separation of concerns and 
+                        independence of frameworks. When applied to Flutter applications, it results in maintainable, 
+                        testable, and scalable codebases.
+                    </p>
+
+                    <h2>Why Clean Architecture?</h2>
+                    <p>
+                        As Flutter applications grow in complexity, maintaining a clear structure becomes crucial. Clean 
+                        Architecture helps by:
+                    </p>
+                    <ul>
+                        <li>Separating business logic from UI and data sources</li>
+                        <li>Making code more testable</li>
+                        <li>Enabling easier maintenance and updates</li>
+                        <li>Allowing independent development of different layers</li>
+                    </ul>
+
+                    <h2>Layer Structure</h2>
+                    
+                    <h3>Presentation Layer</h3>
+                    <p>
+                        This layer contains your UI components (Widgets), state management (Provider, Riverpod, Bloc), 
+                        and presentation logic. It's the outermost layer and depends on the domain layer.
+                    </p>
+
+                    <h3>Domain Layer</h3>
+                    <p>
+                        The core of your application. It contains business logic, entities, and use cases. This layer 
+                        is independent of frameworks and external dependencies. It defines what your application does.
+                    </p>
+
+                    <h3>Data Layer</h3>
+                    <p>
+                        Handles data operations, API calls, local storage, and data transformation. It implements 
+                        repositories defined in the domain layer and converts data models to domain entities.
+                    </p>
+
+                    <h2>Implementation Example</h2>
+                    <p>
+                        Let's consider a simple user authentication flow:
+                    </p>
+                    <ul>
+                        <li><strong>Domain:</strong> User entity, LoginUseCase</li>
+                        <li><strong>Data:</strong> UserRepository implementation, API service, UserModel</li>
+                        <li><strong>Presentation:</strong> LoginScreen widget, LoginViewModel</li>
+                    </ul>
+
+                    <h2>Best Practices</h2>
+                    <ul>
+                        <li>Keep the domain layer pure - no Flutter dependencies</li>
+                        <li>Use dependency injection for loose coupling</li>
+                        <li>Implement repositories as interfaces in the domain layer</li>
+                        <li>Use data models in the data layer, entities in the domain layer</li>
+                        <li>Handle errors at appropriate layers</li>
+                    </ul>
+
+                    <h2>Testing Strategy</h2>
+                    <p>
+                        Clean Architecture makes testing easier:
+                    </p>
+                    <ul>
+                        <li><strong>Unit Tests:</strong> Test use cases and business logic in isolation</li>
+                        <li><strong>Widget Tests:</strong> Test UI components with mocked dependencies</li>
+                        <li><strong>Integration Tests:</strong> Test complete user flows</li>
+                    </ul>
+
+                    <h2>Common Pitfalls</h2>
+                    <ul>
+                        <li>Mixing business logic with UI code</li>
+                        <li>Creating tight coupling between layers</li>
+                        <li>Over-engineering simple features</li>
+                        <li>Not following the dependency rule (inner layers shouldn't depend on outer layers)</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Clean Architecture in Flutter requires discipline and upfront planning, but the benefits in terms 
+                        of maintainability and testability are significant. Start with a simple structure and evolve it as 
+                        your application grows. Remember, the goal is to create code that is easy to understand, test, and modify.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Mobile Application - Khadga Bahadur Shrestha</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Source+Serif+Pro:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:wght@300;400;500;700&family=PT+Sans:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inconsolata:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">KB</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#experience">Experience</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#blogs">Blogs</a>
+                <a href="/#skills">Skills</a>
+                <a href="/#contact">Contact</a>
+                <a href="/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="section">
+            <div class="container">
+                <div style="margin-bottom: 40px;">
+                    <a href="/#projects" style="color: #888; text-decoration: none;">← back to projects</a>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-transform: lowercase;">Flutter Mobile Application</h1>
+                <p class="project-meta" style="margin-bottom: 40px;">Mobile Development / Flutter / 2023</p>
+
+                <div style="max-width: 800px;">
+                    <h2>Overview</h2>
+                    <p>
+                        Developed a production-ready mobile application using Flutter framework with Clean Architecture principles. 
+                        The application serves as the core product for the company, handling complex business logic while 
+                        maintaining code quality and testability.
+                    </p>
+
+                    <h2>Architecture</h2>
+                    <p>
+                        The application follows Clean Architecture with clear separation of concerns:
+                    </p>
+                    <ul>
+                        <li><strong>Presentation Layer:</strong> UI components, state management using Provider/Riverpod</li>
+                        <li><strong>Domain Layer:</strong> Business logic, entities, and use cases</li>
+                        <li><strong>Data Layer:</strong> Repositories, data sources, and API clients</li>
+                    </ul>
+
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Cross-platform support (iOS and Android)</li>
+                        <li>Offline-first architecture with local caching</li>
+                        <li>Real-time data synchronization</li>
+                        <li>Comprehensive test coverage (Unit, Widget, Integration tests)</li>
+                        <li>Automated CI/CD for both platforms</li>
+                    </ul>
+
+                    <h2>Development Practices</h2>
+                    <p>
+                        Implemented Test-Driven Development (TDD) throughout the project lifecycle. This approach helped catch 
+                        bugs early and ensured high code quality. The test suite includes unit tests for business logic, 
+                        widget tests for UI components, and integration tests for end-to-end scenarios.
+                    </p>
+
+                    <h2>CI/CD Pipeline</h2>
+                    <p>
+                        Automated release pipelines were set up for both Android and iOS. The pipeline includes:
+                    </p>
+                    <ul>
+                        <li>Automated testing on every commit</li>
+                        <li>Code quality checks and linting</li>
+                        <li>Automated builds for both platforms</li>
+                        <li>Beta distribution through Firebase App Distribution</li>
+                        <li>Production releases to App Store and Google Play</li>
+                    </ul>
+
+                    <h2>Results</h2>
+                    <p>
+                        The application achieved 95%+ test coverage and significantly reduced bug reports in production. 
+                        The Clean Architecture approach made the codebase maintainable and allowed for easy feature additions. 
+                        The automated CI/CD pipeline reduced release time from days to hours.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Khadga Bahadur Shrestha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+

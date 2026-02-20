@@ -33,7 +33,6 @@ const personJsonLd = {
     addressCountry: 'AU',
   },
   email: 'khadgalovecoding2016@gmail.com',
-  telephone: '+61432688763',
   sameAs: [
     'https://github.com/kodega2016',
     'https://linkedin.com/in/kodega',
@@ -361,10 +360,6 @@ export default async function Home() {
             <a href="mailto:khadgalovecoding2016@gmail.com" className="contact-row">
               <span className="contact-key">Email</span>
               <span className="contact-val">khadgalovecoding2016@gmail.com</span>
-            </a>
-            <a href="tel:+61432688763" className="contact-row">
-              <span className="contact-key">Phone</span>
-              <span className="contact-val">+61 (0) 432 688 763</span>
             </a>
             <a href="https://khadgabahadur.com.np" target="_blank" rel="noopener noreferrer" className="contact-row">
               <span className="contact-key">Website</span>

@@ -15,15 +15,16 @@ export default function Navbar() {
   return (
     <nav>
       <div className="nav-inner">
-        <Link href="/" className="nav-logo" onClick={close}>KB</Link>
+        <Link href="/" className="nav-logo" onClick={close}><span className="nav-prompt">&gt;</span>kb</Link>
         <div className={`nav-pill ${open ? 'open' : ''}`}>
-          <NavLink href={isHome ? '#about' : '/#about'} onClick={close}>About</NavLink>
-          <NavLink href={isHome ? '#experience' : '/#experience'} onClick={close}>Experience</NavLink>
-          <NavLink href={isHome ? '#projects' : '/#projects'} onClick={close}>Projects</NavLink>
-          <NavLink href={isHome ? '#blogs' : '/#blogs'} onClick={close}>Blog</NavLink>
-          <NavLink href={isHome ? '#contact' : '/#contact'} onClick={close}>Contact</NavLink>
+          <NavLink href={isHome ? '#about' : '/#about'} onClick={close}>/about</NavLink>
+          <NavLink href={isHome ? '#experience' : '/#experience'} onClick={close}>/experience</NavLink>
+          <NavLink href={isHome ? '#skills' : '/#skills'} onClick={close}>/skills</NavLink>
+          <NavLink href={isHome ? '#projects' : '/#projects'} onClick={close}>/projects</NavLink>
+          <NavLink href={isHome ? '#blogs' : '/#blogs'} onClick={close}>/blog</NavLink>
+          <NavLink href={isHome ? '#contact' : '/#contact'} onClick={close}>/contact</NavLink>
         </div>
-        <a href="/khadga-bahadur-shrestha.pdf" download className="nav-resume" onClick={close}>Resume</a>
+        <a href="/khadga-bahadur-shrestha.pdf" download className="nav-resume" onClick={close}><span className="nav-dl">&darr;</span> resume</a>
         <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Menu">
           <span /><span /><span />
         </button>

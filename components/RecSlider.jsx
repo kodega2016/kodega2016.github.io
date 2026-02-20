@@ -1,7 +1,3 @@
-'use client';
-
-import { useState } from 'react';
-
 const recs = [
   {
     img: '/people/khimananda.jpg',
@@ -23,41 +19,21 @@ const recs = [
   },
 ];
 
-const PER_PAGE = 2;
-const totalPages = Math.ceil(recs.length / PER_PAGE);
-
 export default function RecSlider() {
-  const [page, setPage] = useState(0);
-  const visible = recs.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
-
   return (
-    <div className="rec-slider">
-      <div className="rec-grid">
-        {visible.map((r) => (
-          <blockquote className="rec-card" key={r.name}>
-            <div className="rec-person">
-              <img src={r.img} alt={r.name} className="rec-avatar" />
-              <div>
-                <strong>{r.name}</strong>
-                <span>{r.role}</span>
-              </div>
+    <div className="rec-grid">
+      {recs.map((r) => (
+        <blockquote className="rec-card" key={r.name}>
+          <p>&ldquo;{r.quote}&rdquo;</p>
+          <div className="rec-person">
+            <img src={r.img} alt={r.name} className="rec-avatar" />
+            <div>
+              <strong>{r.name}</strong>
+              <span>{r.role}</span>
             </div>
-            <p>&ldquo;{r.quote}&rdquo;</p>
-          </blockquote>
-        ))}
-      </div>
-      {totalPages > 1 && (
-        <div className="rec-nav">
-          {Array.from({ length: totalPages }, (_, i) => (
-            <button
-              key={i}
-              className={`rec-dot ${i === page ? 'active' : ''}`}
-              onClick={() => setPage(i)}
-              aria-label={`Page ${i + 1}`}
-            />
-          ))}
-        </div>
-      )}
+          </div>
+        </blockquote>
+      ))}
     </div>
   );
 }

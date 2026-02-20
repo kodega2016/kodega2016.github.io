@@ -163,7 +163,7 @@ export default async function Home() {
               </h1>
               <p className="hero-intro">
                 Senior DevOps Engineer in Perth, Australia with 7+ years shipping resilient infrastructure.
-                I manage 100+ microservices on AWS/Kubernetes at PortPro, cut deploy times by 60%,
+                I manage 100+ microservices on AWS ECS at PortPro, cut deploy times by 60%,
                 and build developer tooling that teams actually love.
               </p>
               <div className="hero-actions">
@@ -182,7 +182,7 @@ export default async function Home() {
                   <p className="terminal-line"><span className="t-prompt">$</span> cat core_strengths.yml</p>
                   <div className="terminal-output">
                     <p><span className="t-key">platform:</span> AWS, Kubernetes, Terraform</p>
-                    <p><span className="t-key">cicd:</span> GitHub Actions, Docker, GitOps</p>
+                    <p><span className="t-key">cicd:</span> GitHub Actions, Docker, Reusable Workflows</p>
                     <p><span className="t-key">data:</span> MongoDB, PostgreSQL, Redis</p>
                     <p><span className="t-key">sre:</span> Observability, DR, Monitoring</p>
                     <p><span className="t-key">mobile:</span> Flutter, React Native</p>
@@ -205,8 +205,8 @@ export default async function Home() {
             <p>
               With 7+ years of professional experience, I&rsquo;ve progressed from web development to
               senior DevOps and platform engineering roles. Currently at <strong>PortPro</strong>, I manage
-              cloud infrastructure for 100+ microservices on AWS, run Kubernetes clusters with GitOps
-              workflows, and build CI/CD pipelines that cut deployment time by 60%.
+              cloud infrastructure for 100+ microservices on AWS, deploy services on ECS with
+              GitHub Actions using reusable workflows, and build CI/CD pipelines that cut deployment time by 60%.
             </p>
             <p>
               Previously, I architected a Flutter-based child care platform at <strong>Parentiv</strong> with

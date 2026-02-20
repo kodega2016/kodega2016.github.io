@@ -4,6 +4,8 @@ import RecSlider from '@/components/RecSlider';
 
 export const revalidate = 60;
 
+const SITE_URL = 'https://khadgabahadur.com.np';
+
 async function getProjects() {
   const { data } = await supabase.from('projects').select('id, slug, title, meta, summary').order('created_at', { ascending: false });
   return data || [];
@@ -14,57 +16,194 @@ async function getBlogs() {
   return data || [];
 }
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${SITE_URL}/#person`,
+  name: 'Khadga Bahadur Shrestha',
+  url: SITE_URL,
+  image: `${SITE_URL}/favicon.svg`,
+  jobTitle: 'Senior DevOps Engineer & Software Developer',
+  description:
+    'Senior DevOps Engineer, Platform Engineer, and Flutter Developer based in Perth, Western Australia with 7+ years of experience in cloud infrastructure, CI/CD automation, and mobile app development.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Perth',
+    addressRegion: 'Western Australia',
+    addressCountry: 'AU',
+  },
+  email: 'khadgalovecoding2016@gmail.com',
+  telephone: '+61432688763',
+  sameAs: [
+    'https://github.com/kodega2016',
+    'https://linkedin.com/in/kodega',
+  ],
+  knowsAbout: [
+    'DevOps', 'Platform Engineering', 'AWS', 'Kubernetes', 'Docker',
+    'Terraform', 'CI/CD', 'GitHub Actions', 'Flutter', 'React.js',
+    'Node.js', 'Mobile App Development', 'Cloud Architecture',
+    'Infrastructure as Code', 'MongoDB', 'PostgreSQL',
+    'Site Reliability Engineering',
+  ],
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Tribhuvan University',
+  },
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', name: 'AWS Certified Solutions Architect – Associate', credentialCategory: 'certification' },
+    { '@type': 'EducationalOccupationalCredential', name: 'AWS Certified Cloud Practitioner', credentialCategory: 'certification' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Kubernetes for Absolute Beginners', credentialCategory: 'certification' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Terraform Basics Training', credentialCategory: 'certification' },
+    { '@type': 'EducationalOccupationalCredential', name: 'GitOps with ArgoCD', credentialCategory: 'certification' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Docker Training Course', credentialCategory: 'certification' },
+  ],
+  hasOccupation: [
+    {
+      '@type': 'Occupation',
+      name: 'Senior Software Engineer / DevOps Engineer',
+      occupationLocation: { '@type': 'Country', name: 'Nepal' },
+      description: 'Cloud infrastructure, Kubernetes, CI/CD automation, Flutter mobile development',
+    },
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'PortPro Pvt. Ltd.',
+    url: 'https://portpro.io',
+  },
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'Khadga Bahadur Shrestha',
+  url: SITE_URL,
+  description: 'Portfolio of Khadga Bahadur Shrestha — Senior DevOps Engineer, Platform Engineer, and Flutter Developer based in Perth, Australia.',
+  author: { '@id': `${SITE_URL}/#person` },
+};
+
+const profilePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${SITE_URL}/#profilepage`,
+  name: 'Khadga Bahadur Shrestha — DevOps Engineer & Software Developer',
+  url: SITE_URL,
+  description: 'Portfolio and resume of Khadga Bahadur Shrestha, a Senior DevOps Engineer and Software Developer based in Perth, Australia.',
+  mainEntity: { '@id': `${SITE_URL}/#person` },
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+};
+
 export default async function Home() {
   const [projects, blogs] = await Promise.all([getProjects(), getBlogs()]);
 
+  const projectListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Projects by Khadga Bahadur Shrestha',
+    itemListElement: projects.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.title,
+      url: `${SITE_URL}/projects/${p.slug}`,
+      description: p.summary,
+    })),
+  };
+
+  const blogListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Blog posts by Khadga Bahadur Shrestha',
+    itemListElement: blogs.map((b, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: b.title,
+      url: `${SITE_URL}/blogs/${b.slug}`,
+      description: b.summary,
+    })),
+  };
+
   return (
     <>
-      <section id="about" className="hero">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectListJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}
+      />
+
+      <section id="about" className="hero" aria-label="About Khadga Bahadur Shrestha" itemScope itemType="https://schema.org/Person">
         <div className="container">
+          <meta itemProp="name" content="Khadga Bahadur Shrestha" />
+          <meta itemProp="url" content={SITE_URL} />
+          <meta itemProp="email" content="khadgalovecoding2016@gmail.com" />
+          <meta itemProp="telephone" content="+61432688763" />
+          <meta itemProp="image" content={`${SITE_URL}/favicon.svg`} />
+          <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+            <meta itemProp="addressLocality" content="Perth" />
+            <meta itemProp="addressRegion" content="Western Australia" />
+            <meta itemProp="addressCountry" content="AU" />
+          </div>
           <div className="hero-badge">
-            <span className="status-dot" />
+            <span className="status-dot" aria-hidden="true" />
             Available for work
           </div>
           <p className="hero-label">Khadga Bahadur Shrestha</p>
-          <h1>Senior Software Engineer<br />&amp; DevOps Engineer</h1>
-          <p className="hero-intro">
-            Software Engineer with 7+ years of experience designing and operating highly available
-            cloud platforms. At PortPro, I manage infrastructure for 100+ microservices with strict
-            uptime SLAs and reduced deployment time by 60% building fast, reliable CI/CD systems.
-            I also handle mobile app releases with crash reporting, manage database migrations
-            and monitoring, and support developers with infrastructure and server tooling.
-            My background in full-stack development (Flutter, React, Node.js) gives me a unique
-            edge&thinsp;&mdash;&thinsp;I build infrastructure from a developer&rsquo;s perspective, ensuring
-            systems are observable, resilient, and easy to operate.
+          <h1>
+            <span itemProp="jobTitle">Senior DevOps Engineer</span><br />&amp; <span>Software Developer in Perth, Australia</span>
+          </h1>
+          <p className="hero-intro" itemProp="description">
+            DevOps Engineer and Software Developer based in Perth, Western Australia with 7+ years
+            of experience designing and operating highly available cloud platforms. At <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization"><span itemProp="name">PortPro</span></span>, I manage
+            infrastructure for 100+ microservices with strict uptime SLAs and reduced deployment time
+            by 60% building fast, reliable CI/CD systems. As a platform engineer, I also handle mobile
+            app releases with crash reporting, manage database migrations and monitoring, and support
+            developers with infrastructure and server tooling.
+            My background as a full-stack developer and Flutter developer (Flutter, React, Node.js) gives
+            me a unique edge&thinsp;&mdash;&thinsp;I build infrastructure from a developer&rsquo;s perspective,
+            ensuring systems are observable, resilient, and easy to operate.
           </p>
           <div className="hero-strengths">
             <h2>Core Strengths</h2>
             <ul>
-              <li>Platform Engineering &amp; Cloud Architecture (AWS, Kubernetes, Terraform)</li>
-              <li>CI/CD &amp; Automation (GitHub Actions, Docker, GitOps)</li>
-              <li>Databases &amp; Data Operations (MongoDB, PostgreSQL, Redis, TimescaleDB)</li>
-              <li>Observability, Disaster Recovery &amp; Reliability</li>
-              <li>Developer Experience &amp; Internal Tooling</li>
+              <li itemProp="knowsAbout">Platform Engineering &amp; Cloud Architecture (AWS, Kubernetes, Terraform)</li>
+              <li itemProp="knowsAbout">CI/CD &amp; DevOps Automation (GitHub Actions, Docker, GitOps)</li>
+              <li itemProp="knowsAbout">Databases &amp; Data Operations (MongoDB, PostgreSQL, Redis, TimescaleDB)</li>
+              <li itemProp="knowsAbout">Observability, Disaster Recovery &amp; Site Reliability Engineering</li>
+              <li itemProp="knowsAbout">Mobile App Development (Flutter) &amp; Developer Experience Tooling</li>
             </ul>
           </div>
           <div className="hero-actions">
             <a href="mailto:khadgalovecoding2016@gmail.com" className="hero-btn-primary">Get in touch</a>
-            <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" className="hero-btn">GitHub</a>
-            <a href="https://linkedin.com/in/kodega" target="_blank" rel="noopener noreferrer" className="hero-btn">LinkedIn</a>
+            <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" className="hero-btn" itemProp="sameAs">GitHub</a>
+            <a href="https://linkedin.com/in/kodega" target="_blank" rel="noopener noreferrer" className="hero-btn" itemProp="sameAs">LinkedIn</a>
           </div>
         </div>
       </section>
 
-      <section id="experience" className="section">
+      <section id="experience" className="section" aria-label="Work experience">
         <div className="container">
           <p className="section-label">Experience</p>
           <h2 className="section-title">Where I&rsquo;ve worked</h2>
           <div className="exp-list">
 
-            <div className="exp-row">
+            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
               <div className="exp-row-left">
-                <h3>Senior Software Engineer / DevOps Engineer</h3>
-                <p className="exp-company">PortPro Pvt. Ltd. &middot; Kathmandu, Nepal</p>
+                <h3 itemProp="roleName">Senior Software Engineer / DevOps Engineer</h3>
+                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">PortPro Pvt. Ltd.</span></span> &middot; Kathmandu, Nepal</p>
 
                 <h4 className="exp-subhead">Cloud Infrastructure &amp; Architecture</h4>
                 <ul className="exp-bullets">
@@ -128,13 +267,13 @@ export default async function Home() {
                   <li>Wrote comprehensive test cases including unit tests, integration tests, and end-to-end tests; implemented automated test suites in CI/CD pipelines</li>
                 </ul>
               </div>
-              <span className="exp-row-date">Sep 2021 &ndash; Present</span>
+              <span className="exp-row-date"><meta itemProp="startDate" content="2021-09" />Sep 2021 &ndash; Present</span>
             </div>
 
-            <div className="exp-row">
+            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
               <div className="exp-row-left">
-                <h3>Mobile Application Architect &amp; Full Stack Developer</h3>
-                <p className="exp-company">Parentiv &middot; Remote</p>
+                <h3 itemProp="roleName">Mobile Application Architect &amp; Full Stack Developer</h3>
+                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">Parentiv</span></span> &middot; Remote</p>
                 <ul className="exp-bullets">
                   <li>Designed application architecture using Flutter with Clean Architecture patterns and state management solutions for child care management platform serving thousands of users</li>
                   <li>Architected serverless backend infrastructure using Firebase Cloud Functions, Firestore, and Firebase Authentication, handling real-time data synchronization, offline capabilities, and secure multi-tenant access control</li>
@@ -143,40 +282,40 @@ export default async function Home() {
                   <li>Optimized application performance achieving fast cold start times and smooth rendering across all supported devices</li>
                 </ul>
               </div>
-              <span className="exp-row-date">Jan 2019 &ndash; Sep 2021</span>
+              <span className="exp-row-date"><meta itemProp="startDate" content="2019-01" /><meta itemProp="endDate" content="2021-09" />Jan 2019 &ndash; Sep 2021</span>
             </div>
 
-            <div className="exp-row">
+            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
               <div className="exp-row-left">
-                <h3>Full Stack Developer</h3>
-                <p className="exp-company">Paailatechnologies &middot; Biratnagar, Nepal</p>
+                <h3 itemProp="roleName">Full Stack Developer</h3>
+                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">Paailatechnologies</span></span> &middot; Biratnagar, Nepal</p>
                 <ul className="exp-bullets">
                   <li>Designed and developed RESTful APIs using Laravel framework with optimized MySQL database schemas for job portal and television channel applications</li>
                   <li>Built cross-platform mobile applications using Flutter integrated with Laravel backend APIs for seamless data synchronization</li>
                   <li>Managed complete application lifecycle from development to App Store and Google Play Store releases</li>
                 </ul>
               </div>
-              <span className="exp-row-date">May 2018 &ndash; Oct 2019</span>
+              <span className="exp-row-date"><meta itemProp="startDate" content="2018-05" /><meta itemProp="endDate" content="2019-10" />May 2018 &ndash; Oct 2019</span>
             </div>
 
-            <div className="exp-row">
+            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
               <div className="exp-row-left">
-                <h3>Junior Web Developer</h3>
-                <p className="exp-company">Delta Tech &middot; Biratnagar, Nepal</p>
+                <h3 itemProp="roleName">Junior Web Developer</h3>
+                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">Delta Tech</span></span> &middot; Biratnagar, Nepal</p>
                 <ul className="exp-bullets">
                   <li>Developed responsive web applications using HTML5, CSS3, JavaScript, Bootstrap, and backend services using PHP and CodeIgniter framework</li>
                   <li>Integrated third-party services including Google Sign-In authentication and Google Sheets API for data management</li>
                   <li>Delivered web solutions for e-commerce platforms and business applications across the complete software development lifecycle</li>
                 </ul>
               </div>
-              <span className="exp-row-date">Mar 2016 &ndash; May 2018</span>
+              <span className="exp-row-date"><meta itemProp="startDate" content="2016-03" /><meta itemProp="endDate" content="2018-05" />Mar 2016 &ndash; May 2018</span>
             </div>
 
           </div>
         </div>
       </section>
 
-      <section id="skills" className="section">
+      <section id="skills" className="section" aria-label="Technical skills">
         <div className="container">
           <p className="section-label">Skills</p>
           <h2 className="section-title">Core Competencies</h2>
@@ -235,7 +374,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" aria-label="Testimonials and recommendations">
         <div className="container">
           <p className="section-label">Testimonials</p>
           <h2 className="section-title">Recommendations</h2>
@@ -243,36 +382,42 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="projects" className="section">
+      <section id="projects" className="section" aria-label="Portfolio projects">
         <div className="container">
           <p className="section-label">Work</p>
           <h2 className="section-title">Projects</h2>
-          <div className="project-grid">
-            {projects.map((project) => (
-              <Link href={`/projects/${project.slug}`} key={project.id} className="project-item">
+          <div className="project-grid" itemScope itemType="https://schema.org/ItemList">
+            <meta itemProp="name" content="Projects by Khadga Bahadur Shrestha" />
+            {projects.map((project, i) => (
+              <Link href={`/projects/${project.slug}`} key={project.id} className="project-item" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                <meta itemProp="position" content={String(i + 1)} />
+                <meta itemProp="url" content={`${SITE_URL}/projects/${project.slug}`} />
                 <p className="project-meta">{project.meta}</p>
-                <h3>{project.title}</h3>
-                <p>{project.summary}</p>
+                <h3 itemProp="name">{project.title}</h3>
+                <p itemProp="description">{project.summary}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="blogs" className="section">
+      <section id="blogs" className="section" aria-label="Blog articles">
         <div className="container">
           <p className="section-label">Writing</p>
           <h2 className="section-title">Blog</h2>
-          <div className="blog-grid">
-            {blogs.map((blog) => {
+          <div className="blog-grid" itemScope itemType="https://schema.org/ItemList">
+            <meta itemProp="name" content="Blog posts by Khadga Bahadur Shrestha" />
+            {blogs.map((blog, i) => {
               const parts = blog.meta.split(' / ');
               const date = parts[parts.length - 1];
               const category = parts.slice(0, -1).join(' / ');
               return (
-                <Link href={`/blogs/${blog.slug}`} key={blog.id} className="blog-item">
+                <Link href={`/blogs/${blog.slug}`} key={blog.id} className="blog-item" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <meta itemProp="position" content={String(i + 1)} />
+                  <meta itemProp="url" content={`${SITE_URL}/blogs/${blog.slug}`} />
                   <p className="blog-meta">{date} &middot; {category}</p>
-                  <h3>{blog.title}</h3>
-                  <p>{blog.summary}</p>
+                  <h3 itemProp="name">{blog.title}</h3>
+                  <p itemProp="description">{blog.summary}</p>
                 </Link>
               );
             })}
@@ -280,34 +425,35 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="education" className="section">
+      <section id="education" className="section" aria-label="Education and certifications">
         <div className="container">
           <p className="section-label">Education</p>
           <h2 className="section-title">Education &amp; Certifications</h2>
-          <div className="edu-item">
-            <h3>Bachelor of Science in Computer Science and Information Technology (BSc CSIT)</h3>
-            <p>Tribhuvan University, Biratnagar</p>
+          <div className="edu-item" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
+            <h3 itemProp="name">Bachelor of Science in Computer Science and Information Technology (BSc CSIT)</h3>
+            <p><span itemProp="recognizedBy" itemScope itemType="https://schema.org/CollegeOrUniversity"><span itemProp="name">Tribhuvan University</span></span>, Biratnagar</p>
             <p className="edu-date">2016 &ndash; 2020</p>
           </div>
           <h3 className="section-subtitle">Certifications</h3>
           <ul className="cert-list">
-            <li>AWS Certified Solutions Architect &ndash; Associate</li>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>Kubernetes for Absolute Beginners</li>
-            <li>Terraform Basics Training</li>
-            <li>GitOps with ArgoCD</li>
-            <li>MongoDB CRUD Operations in Node.js</li>
-            <li>Docker Training Course</li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">AWS Certified Solutions Architect &ndash; Associate</span></li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">AWS Certified Cloud Practitioner</span></li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">Kubernetes for Absolute Beginners</span></li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">Terraform Basics Training</span></li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">GitOps with ArgoCD</span></li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">MongoDB CRUD Operations in Node.js</span></li>
+            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">Docker Training Course</span></li>
           </ul>
         </div>
       </section>
 
-      <section id="contact" className="section">
+      <section id="contact" className="section" aria-label="Contact information">
         <div className="container">
           <p className="section-label">Say hello</p>
           <h2 className="section-title">Contact</h2>
           <p className="contact-intro">
-            Open to opportunities in Australia, remote roles, and freelance projects.
+            DevOps Engineer and software developer based in Perth, Western Australia.
+            Open to DevOps, platform engineering, and software development opportunities in Australia, remote roles, and freelance projects.
           </p>
           <div className="contact-rows">
             <a href="mailto:khadgalovecoding2016@gmail.com" className="contact-row">
@@ -332,7 +478,7 @@ export default async function Home() {
             </a>
             <div className="contact-row">
               <span className="contact-key">Location</span>
-              <span className="contact-val">Perth, Western Australia</span>
+              <span className="contact-val">Perth, Western Australia, Australia</span>
             </div>
           </div>
         </div>

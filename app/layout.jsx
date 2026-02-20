@@ -1,25 +1,109 @@
 import './globals.css';
+import { Space_Grotesk } from 'next/font/google';
+import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-space',
+});
+
+const SITE_URL = 'https://khadgabahadur.com.np';
+const SITE_NAME = 'Khadga Bahadur Shrestha';
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export const metadata = {
-  title: 'Khadga Bahadur Shrestha — Senior Software & DevOps Engineer',
-  description: 'Senior Software Engineer & DevOps Engineer with 7+ years building scalable apps and cloud infrastructure.',
-  icons: { icon: '/favicon.svg' },
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Khadga Bahadur Shrestha — DevOps Engineer & Software Developer in Perth, Australia',
+    template: '%s — Khadga Bahadur Shrestha',
+  },
+  description:
+    'Khadga Bahadur Shrestha is a Senior DevOps Engineer, Platform Engineer & Flutter Developer based in Perth, Australia with 7+ years of experience in cloud infrastructure (AWS, Kubernetes, Terraform), CI/CD automation, and mobile app development.',
+  keywords: [
+    'devops engineer',
+    'devops engineer australia',
+    'devops engineer perth',
+    'devops in australia',
+    'platform engineer australia',
+    'flutter developer',
+    'flutter developer australia',
+    'mobile app developer australia',
+    'software developer perth',
+    'software developer australia',
+    'it developer perth',
+    'cloud engineer australia',
+    'kubernetes engineer',
+    'aws devops engineer',
+    'senior software engineer australia',
+    'infrastructure engineer perth',
+    'ci cd automation',
+    'terraform engineer',
+    'full stack developer australia',
+    'react developer perth',
+  ],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_AU',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: 'Khadga Bahadur Shrestha — DevOps Engineer & Software Developer in Perth, Australia',
+    description:
+      'Senior DevOps Engineer & Platform Engineer based in Perth, Australia. 7+ years building scalable cloud infrastructure, CI/CD pipelines, and mobile applications with Flutter, React & Node.js.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Khadga Bahadur Shrestha — DevOps Engineer in Perth, Australia',
+    description:
+      'Senior DevOps Engineer & Platform Engineer based in Perth, Australia. 7+ years in cloud infrastructure, Kubernetes, Terraform, and mobile app development.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {},
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en-AU" className={spaceGrotesk.variable}>
       <body>
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+            </Script>
+          </>
+        )}
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -26,7 +26,7 @@ export default function RecSlider() {
         <blockquote className="rec-card" key={r.name}>
           <p>&ldquo;{r.quote}&rdquo;</p>
           <div className="rec-person">
-            <img src={r.img} alt={r.name} className="rec-avatar" />
+            <img src={r.img} alt={`Photo of ${r.name}, ${r.role}`} className="rec-avatar" width={36} height={36} loading="lazy" />
             <div>
               <strong>{r.name}</strong>
               <span>{r.role}</span>

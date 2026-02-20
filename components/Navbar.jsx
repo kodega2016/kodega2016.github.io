@@ -13,19 +13,19 @@ export default function Navbar() {
   function close() { setOpen(false); }
 
   return (
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <div className="nav-inner">
-        <Link href="/" className="nav-logo" onClick={close}><span className="nav-prompt">&gt;</span>kb</Link>
-        <div className={`nav-pill ${open ? 'open' : ''}`}>
-          <NavLink href={isHome ? '#about' : '/#about'} onClick={close}>/about</NavLink>
-          <NavLink href={isHome ? '#experience' : '/#experience'} onClick={close}>/experience</NavLink>
-          <NavLink href={isHome ? '#skills' : '/#skills'} onClick={close}>/skills</NavLink>
-          <NavLink href={isHome ? '#projects' : '/#projects'} onClick={close}>/projects</NavLink>
-          <NavLink href={isHome ? '#blogs' : '/#blogs'} onClick={close}>/blog</NavLink>
-          <NavLink href={isHome ? '#contact' : '/#contact'} onClick={close}>/contact</NavLink>
+        <Link href="/" className="nav-logo" onClick={close} aria-label="Khadga Bahadur Shrestha — Home"><span className="nav-prompt">&gt;</span>kb</Link>
+        <div id="nav-menu" className={`nav-pill ${open ? 'open' : ''}`} role="menubar">
+          <NavLink href={isHome ? '#about' : '/#about'} onClick={close} role="menuitem">/about</NavLink>
+          <NavLink href={isHome ? '#experience' : '/#experience'} onClick={close} role="menuitem">/experience</NavLink>
+          <NavLink href={isHome ? '#skills' : '/#skills'} onClick={close} role="menuitem">/skills</NavLink>
+          <NavLink href={isHome ? '#projects' : '/#projects'} onClick={close} role="menuitem">/projects</NavLink>
+          <NavLink href={isHome ? '#blogs' : '/#blogs'} onClick={close} role="menuitem">/blog</NavLink>
+          <NavLink href={isHome ? '#contact' : '/#contact'} onClick={close} role="menuitem">/contact</NavLink>
         </div>
-        <a href="/khadga-bahadur-shrestha.pdf" download className="nav-resume" onClick={close}><span className="nav-dl">&darr;</span> resume</a>
-        <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Menu">
+        <a href="/khadga-bahadur-shrestha.pdf" download className="nav-resume" onClick={close} aria-label="Download resume PDF"><span className="nav-dl" aria-hidden="true">&darr;</span> resume</a>
+        <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle navigation menu" aria-expanded={open} aria-controls="nav-menu">
           <span /><span /><span />
         </button>
       </div>

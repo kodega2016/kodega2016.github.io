@@ -59,7 +59,7 @@ export default async function ProjectDetail({ params }) {
   };
 
   return (
-    <article className="section">
+    <article className="section detail-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

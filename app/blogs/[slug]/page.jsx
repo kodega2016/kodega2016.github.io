@@ -84,7 +84,7 @@ export default async function BlogDetail({ params }) {
   };
 
   return (
-    <article className="section">
+    <article className="section detail-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

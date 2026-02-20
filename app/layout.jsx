@@ -1,6 +1,6 @@
 import './globals.css';
 import { Space_Grotesk } from 'next/font/google';
-import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -93,21 +93,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-AU" className={spaceGrotesk.variable}>
       <body>
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
-            </Script>
-          </>
-        )}
         <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }

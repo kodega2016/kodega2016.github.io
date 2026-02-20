@@ -4,9 +4,9 @@
   --bg: #fafaf8;
   --text: #111;
   --text-2: #555;
-  --text-3: #737373;
+  --text-3: #666666;
   --line: #e5e5e5;
-  --accent: #0d9488;
+  --accent: #0f766e;
   --surface: #f5f5f3;
   --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
   --font: var(--font-space), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -65,7 +65,7 @@ nav {
 }
 .nav-pill a:hover {
   color: var(--accent); text-decoration: none;
-  background: rgba(13,148,136,0.08);
+  background: rgba(15,118,110,0.08);
 }
 
 .nav-resume {
@@ -83,7 +83,7 @@ nav {
   transition: all 0.2s ease;
 }
 .nav-resume:hover {
-  color: var(--accent); border-color: rgba(13,148,136,0.3);
+  color: var(--accent); border-color: rgba(15,118,110,0.3);
   text-decoration: none;
 }
 .nav-resume:hover .nav-dl { opacity: 1; }
@@ -110,7 +110,7 @@ nav {
   text-transform: uppercase; letter-spacing: 0.08em;
   margin-bottom: 32px;
   padding: 6px 16px;
-  border: 1px solid rgba(13,148,136,0.25);
+  border: 1px solid rgba(15,118,110,0.25);
   border-radius: 100px;
 }
 .status-dot {
@@ -422,6 +422,7 @@ a.contact-row:hover::after { opacity: 1; }
 .contact-val { font-size: 14px; color: var(--text); transition: color 0.2s ease; }
 
 /* ── Detail pages ── */
+.section.detail-page { padding-top: 120px; }
 .back-link { color: var(--text-3); font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
 .back-link:hover { color: var(--accent); text-decoration: none; }
 .detail-title { font-size: clamp(24px,4vw,34px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.2; }
@@ -660,7 +661,7 @@ footer a:hover { color: var(--text); text-decoration: none; }
   .nav-pill { display: none; position: absolute; top: 56px; left: 12px; right: 12px; background: rgba(10,10,10,0.97); border-radius: 10px; padding: 8px; flex-direction: column; gap: 0; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
   .nav-pill.open { display: flex; }
   .nav-pill a { padding: 10px 14px; font-size: 13px; border-radius: 6px; }
-  .nav-pill a:hover { background: rgba(13,148,136,0.08); }
+  .nav-pill a:hover { background: rgba(15,118,110,0.08); }
   .nav-toggle { display: flex; }
   .hero { padding: 100px 0 56px; }
   .hero h1 { font-size: clamp(32px, 8vw, 48px); }

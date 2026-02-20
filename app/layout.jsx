@@ -15,14 +15,20 @@ const SITE_URL = 'https://khadgabahadur.com.np';
 const SITE_NAME = 'Khadga Bahadur Shrestha';
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Khadga Bahadur Shrestha — DevOps Engineer & Software Developer in Perth, Australia',
-    template: '%s — Khadga Bahadur Shrestha',
+    default: 'Khadga Shrestha — DevOps Engineer in Perth, AU',
+    template: '%s — Khadga Shrestha',
   },
   description:
-    'Khadga Bahadur Shrestha is a Senior DevOps Engineer, Platform Engineer & Flutter Developer based in Perth, Australia with 7+ years of experience in cloud infrastructure (AWS, Kubernetes, Terraform), CI/CD automation, and mobile app development.',
+    'Senior DevOps Engineer in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
   keywords: [
     'devops engineer',
     'devops engineer australia',
@@ -65,15 +71,15 @@ export const metadata = {
     locale: 'en_AU',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Khadga Bahadur Shrestha — DevOps Engineer & Software Developer in Perth, Australia',
+    title: 'Khadga Shrestha — DevOps Engineer in Perth, AU',
     description:
-      'Senior DevOps Engineer & Platform Engineer based in Perth, Australia. 7+ years building scalable cloud infrastructure, CI/CD pipelines, and mobile applications with Flutter, React & Node.js.',
+      'Senior DevOps Engineer in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
   },
   twitter: {
     card: 'summary',
-    title: 'Khadga Bahadur Shrestha — DevOps Engineer in Perth, Australia',
+    title: 'Khadga Shrestha — DevOps Engineer in Perth, AU',
     description:
-      'Senior DevOps Engineer & Platform Engineer based in Perth, Australia. 7+ years in cloud infrastructure, Kubernetes, Terraform, and mobile app development.',
+      'Senior DevOps Engineer in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
   },
   robots: {
     index: true,

@@ -145,29 +145,19 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}
       />
 
-      <section id="about" className="hero" aria-label="About Khadga Bahadur Shrestha" itemScope itemType="https://schema.org/Person">
+      <section id="about" className="hero" aria-label="About Khadga Bahadur Shrestha">
         <div className="container">
-          <meta itemProp="name" content="Khadga Bahadur Shrestha" />
-          <meta itemProp="url" content={SITE_URL} />
-          <meta itemProp="email" content="khadgalovecoding2016@gmail.com" />
-          <meta itemProp="telephone" content="+61432688763" />
-          <meta itemProp="image" content={`${SITE_URL}/favicon.svg`} />
-          <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-            <meta itemProp="addressLocality" content="Perth" />
-            <meta itemProp="addressRegion" content="Western Australia" />
-            <meta itemProp="addressCountry" content="AU" />
-          </div>
           <div className="hero-badge">
             <span className="status-dot" aria-hidden="true" />
             Available for work
           </div>
           <p className="hero-label">Khadga Bahadur Shrestha</p>
           <h1>
-            <span itemProp="jobTitle">Senior DevOps Engineer</span><br />&amp; <span>Software Developer in Perth, Australia</span>
+            Senior DevOps Engineer<br />&amp; Software Developer in Perth, Australia
           </h1>
-          <p className="hero-intro" itemProp="description">
+          <p className="hero-intro">
             DevOps Engineer and Software Developer based in Perth, Western Australia with 7+ years
-            of experience designing and operating highly available cloud platforms. At <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization"><span itemProp="name">PortPro</span></span>, I manage
+            of experience designing and operating highly available cloud platforms. At PortPro, I manage
             infrastructure for 100+ microservices with strict uptime SLAs and reduced deployment time
             by 60% building fast, reliable CI/CD systems. As a platform engineer, I also handle mobile
             app releases with crash reporting, manage database migrations and monitoring, and support
@@ -179,17 +169,17 @@ export default async function Home() {
           <div className="hero-strengths">
             <h2>Core Strengths</h2>
             <ul>
-              <li itemProp="knowsAbout">Platform Engineering &amp; Cloud Architecture (AWS, Kubernetes, Terraform)</li>
-              <li itemProp="knowsAbout">CI/CD &amp; DevOps Automation (GitHub Actions, Docker, GitOps)</li>
-              <li itemProp="knowsAbout">Databases &amp; Data Operations (MongoDB, PostgreSQL, Redis, TimescaleDB)</li>
-              <li itemProp="knowsAbout">Observability, Disaster Recovery &amp; Site Reliability Engineering</li>
-              <li itemProp="knowsAbout">Mobile App Development (Flutter) &amp; Developer Experience Tooling</li>
+              <li>Platform Engineering &amp; Cloud Architecture (AWS, Kubernetes, Terraform)</li>
+              <li>CI/CD &amp; DevOps Automation (GitHub Actions, Docker, GitOps)</li>
+              <li>Databases &amp; Data Operations (MongoDB, PostgreSQL, Redis, TimescaleDB)</li>
+              <li>Observability, Disaster Recovery &amp; Site Reliability Engineering</li>
+              <li>Mobile App Development (Flutter) &amp; Developer Experience Tooling</li>
             </ul>
           </div>
           <div className="hero-actions">
             <a href="mailto:khadgalovecoding2016@gmail.com" className="hero-btn-primary">Get in touch</a>
-            <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" className="hero-btn" itemProp="sameAs">GitHub</a>
-            <a href="https://linkedin.com/in/kodega" target="_blank" rel="noopener noreferrer" className="hero-btn" itemProp="sameAs">LinkedIn</a>
+            <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" className="hero-btn">GitHub</a>
+            <a href="https://linkedin.com/in/kodega" target="_blank" rel="noopener noreferrer" className="hero-btn">LinkedIn</a>
           </div>
         </div>
       </section>
@@ -200,10 +190,10 @@ export default async function Home() {
           <h2 className="section-title">Where I&rsquo;ve worked</h2>
           <div className="exp-list">
 
-            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
+            <div className="exp-row">
               <div className="exp-row-left">
-                <h3 itemProp="roleName">Senior Software Engineer / DevOps Engineer</h3>
-                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">PortPro Pvt. Ltd.</span></span> &middot; Kathmandu, Nepal</p>
+                <h3>Senior Software Engineer / DevOps Engineer</h3>
+                <p className="exp-company">PortPro Pvt. Ltd. &middot; Kathmandu, Nepal</p>
 
                 <h4 className="exp-subhead">Cloud Infrastructure &amp; Architecture</h4>
                 <ul className="exp-bullets">
@@ -267,13 +257,13 @@ export default async function Home() {
                   <li>Wrote comprehensive test cases including unit tests, integration tests, and end-to-end tests; implemented automated test suites in CI/CD pipelines</li>
                 </ul>
               </div>
-              <span className="exp-row-date"><meta itemProp="startDate" content="2021-09" />Sep 2021 &ndash; Present</span>
+              <span className="exp-row-date">Sep 2021 &ndash; Present</span>
             </div>
 
-            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
+            <div className="exp-row">
               <div className="exp-row-left">
-                <h3 itemProp="roleName">Mobile Application Architect &amp; Full Stack Developer</h3>
-                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">Parentiv</span></span> &middot; Remote</p>
+                <h3>Mobile Application Architect &amp; Full Stack Developer</h3>
+                <p className="exp-company">Parentiv &middot; Remote</p>
                 <ul className="exp-bullets">
                   <li>Designed application architecture using Flutter with Clean Architecture patterns and state management solutions for child care management platform serving thousands of users</li>
                   <li>Architected serverless backend infrastructure using Firebase Cloud Functions, Firestore, and Firebase Authentication, handling real-time data synchronization, offline capabilities, and secure multi-tenant access control</li>
@@ -282,33 +272,33 @@ export default async function Home() {
                   <li>Optimized application performance achieving fast cold start times and smooth rendering across all supported devices</li>
                 </ul>
               </div>
-              <span className="exp-row-date"><meta itemProp="startDate" content="2019-01" /><meta itemProp="endDate" content="2021-09" />Jan 2019 &ndash; Sep 2021</span>
+              <span className="exp-row-date">Jan 2019 &ndash; Sep 2021</span>
             </div>
 
-            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
+            <div className="exp-row">
               <div className="exp-row-left">
-                <h3 itemProp="roleName">Full Stack Developer</h3>
-                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">Paailatechnologies</span></span> &middot; Biratnagar, Nepal</p>
+                <h3>Full Stack Developer</h3>
+                <p className="exp-company">Paailatechnologies &middot; Biratnagar, Nepal</p>
                 <ul className="exp-bullets">
                   <li>Designed and developed RESTful APIs using Laravel framework with optimized MySQL database schemas for job portal and television channel applications</li>
                   <li>Built cross-platform mobile applications using Flutter integrated with Laravel backend APIs for seamless data synchronization</li>
                   <li>Managed complete application lifecycle from development to App Store and Google Play Store releases</li>
                 </ul>
               </div>
-              <span className="exp-row-date"><meta itemProp="startDate" content="2018-05" /><meta itemProp="endDate" content="2019-10" />May 2018 &ndash; Oct 2019</span>
+              <span className="exp-row-date">May 2018 &ndash; Oct 2019</span>
             </div>
 
-            <div className="exp-row" itemScope itemType="https://schema.org/OrganizationRole">
+            <div className="exp-row">
               <div className="exp-row-left">
-                <h3 itemProp="roleName">Junior Web Developer</h3>
-                <p className="exp-company"><span itemProp="memberOf" itemScope itemType="https://schema.org/Organization"><span itemProp="name">Delta Tech</span></span> &middot; Biratnagar, Nepal</p>
+                <h3>Junior Web Developer</h3>
+                <p className="exp-company">Delta Tech &middot; Biratnagar, Nepal</p>
                 <ul className="exp-bullets">
                   <li>Developed responsive web applications using HTML5, CSS3, JavaScript, Bootstrap, and backend services using PHP and CodeIgniter framework</li>
                   <li>Integrated third-party services including Google Sign-In authentication and Google Sheets API for data management</li>
                   <li>Delivered web solutions for e-commerce platforms and business applications across the complete software development lifecycle</li>
                 </ul>
               </div>
-              <span className="exp-row-date"><meta itemProp="startDate" content="2016-03" /><meta itemProp="endDate" content="2018-05" />Mar 2016 &ndash; May 2018</span>
+              <span className="exp-row-date">Mar 2016 &ndash; May 2018</span>
             </div>
 
           </div>
@@ -386,15 +376,12 @@ export default async function Home() {
         <div className="container">
           <p className="section-label">Work</p>
           <h2 className="section-title">Projects</h2>
-          <div className="project-grid" itemScope itemType="https://schema.org/ItemList">
-            <meta itemProp="name" content="Projects by Khadga Bahadur Shrestha" />
-            {projects.map((project, i) => (
-              <Link href={`/projects/${project.slug}`} key={project.id} className="project-item" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <meta itemProp="position" content={String(i + 1)} />
-                <meta itemProp="url" content={`${SITE_URL}/projects/${project.slug}`} />
+          <div className="project-grid">
+            {projects.map((project) => (
+              <Link href={`/projects/${project.slug}`} key={project.id} className="project-item">
                 <p className="project-meta">{project.meta}</p>
-                <h3 itemProp="name">{project.title}</h3>
-                <p itemProp="description">{project.summary}</p>
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
               </Link>
             ))}
           </div>
@@ -405,19 +392,16 @@ export default async function Home() {
         <div className="container">
           <p className="section-label">Writing</p>
           <h2 className="section-title">Blog</h2>
-          <div className="blog-grid" itemScope itemType="https://schema.org/ItemList">
-            <meta itemProp="name" content="Blog posts by Khadga Bahadur Shrestha" />
-            {blogs.map((blog, i) => {
+          <div className="blog-grid">
+            {blogs.map((blog) => {
               const parts = blog.meta.split(' / ');
               const date = parts[parts.length - 1];
               const category = parts.slice(0, -1).join(' / ');
               return (
-                <Link href={`/blogs/${blog.slug}`} key={blog.id} className="blog-item" itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                  <meta itemProp="position" content={String(i + 1)} />
-                  <meta itemProp="url" content={`${SITE_URL}/blogs/${blog.slug}`} />
+                <Link href={`/blogs/${blog.slug}`} key={blog.id} className="blog-item">
                   <p className="blog-meta">{date} &middot; {category}</p>
-                  <h3 itemProp="name">{blog.title}</h3>
-                  <p itemProp="description">{blog.summary}</p>
+                  <h3>{blog.title}</h3>
+                  <p>{blog.summary}</p>
                 </Link>
               );
             })}
@@ -429,20 +413,20 @@ export default async function Home() {
         <div className="container">
           <p className="section-label">Education</p>
           <h2 className="section-title">Education &amp; Certifications</h2>
-          <div className="edu-item" itemScope itemType="https://schema.org/EducationalOccupationalCredential">
-            <h3 itemProp="name">Bachelor of Science in Computer Science and Information Technology (BSc CSIT)</h3>
-            <p><span itemProp="recognizedBy" itemScope itemType="https://schema.org/CollegeOrUniversity"><span itemProp="name">Tribhuvan University</span></span>, Biratnagar</p>
+          <div className="edu-item">
+            <h3>Bachelor of Science in Computer Science and Information Technology (BSc CSIT)</h3>
+            <p>Tribhuvan University, Biratnagar</p>
             <p className="edu-date">2016 &ndash; 2020</p>
           </div>
           <h3 className="section-subtitle">Certifications</h3>
           <ul className="cert-list">
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">AWS Certified Solutions Architect &ndash; Associate</span></li>
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">AWS Certified Cloud Practitioner</span></li>
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">Kubernetes for Absolute Beginners</span></li>
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">Terraform Basics Training</span></li>
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">GitOps with ArgoCD</span></li>
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">MongoDB CRUD Operations in Node.js</span></li>
-            <li itemScope itemType="https://schema.org/EducationalOccupationalCredential"><span itemProp="name">Docker Training Course</span></li>
+            <li>AWS Certified Solutions Architect &ndash; Associate</li>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>Kubernetes for Absolute Beginners</li>
+            <li>Terraform Basics Training</li>
+            <li>GitOps with ArgoCD</li>
+            <li>MongoDB CRUD Operations in Node.js</li>
+            <li>Docker Training Course</li>
           </ul>
         </div>
       </section>

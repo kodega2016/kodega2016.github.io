@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Page Not Found',
-  description: 'The page you are looking for does not exist. Visit the homepage of Khadga Bahadur Shrestha — DevOps Engineer & Software Developer in Perth, Australia.',
+  description: 'The page you are looking for does not exist. Visit the homepage of Khadga Bahadur Shrestha — DevOps Engineer & Software Developer from Nepal, based in Perth, Australia.',
 };
 
 export default function NotFound() {

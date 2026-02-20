@@ -24,11 +24,11 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Khadga Shrestha — DevOps Engineer in Perth, AU',
+    default: 'Khadga Shrestha — DevOps Engineer from Nepal, Based in Perth',
     template: '%s — Khadga Shrestha',
   },
   description:
-    'Senior DevOps Engineer in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
+    'Senior DevOps Engineer from Nepal, now based in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
   keywords: [
     'devops engineer',
     'devops engineer australia',
@@ -50,6 +50,9 @@ export const metadata = {
     'terraform engineer',
     'full stack developer australia',
     'react developer perth',
+    'nepali developer australia',
+    'nepali devops engineer',
+    'software developer from nepal',
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -71,15 +74,15 @@ export const metadata = {
     locale: 'en_AU',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Khadga Shrestha — DevOps Engineer in Perth, AU',
+    title: 'Khadga Shrestha — DevOps Engineer from Nepal, Based in Perth',
     description:
-      'Senior DevOps Engineer in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
+      'Senior DevOps Engineer from Nepal, now based in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
   },
   twitter: {
     card: 'summary',
-    title: 'Khadga Shrestha — DevOps Engineer in Perth, AU',
+    title: 'Khadga Shrestha — DevOps Engineer from Nepal, Based in Perth',
     description:
-      'Senior DevOps Engineer in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
+      'Senior DevOps Engineer from Nepal, now based in Perth, Australia. 7+ years in AWS, Kubernetes, Terraform, CI/CD, and Flutter development.',
   },
   robots: {
     index: true,

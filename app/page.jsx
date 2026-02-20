@@ -25,7 +25,7 @@ const personJsonLd = {
   image: `${SITE_URL}/favicon.svg`,
   jobTitle: 'Senior DevOps Engineer & Software Developer',
   description:
-    'Senior DevOps Engineer, Platform Engineer, and Flutter Developer based in Perth, Western Australia with 7+ years of experience in cloud infrastructure, CI/CD automation, and mobile app development.',
+    'Senior DevOps Engineer, Platform Engineer, and Flutter Developer originally from Nepal, now based in Perth, Western Australia with 7+ years of experience in cloud infrastructure, CI/CD automation, and mobile app development.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Perth',
@@ -45,6 +45,8 @@ const personJsonLd = {
     'Infrastructure as Code', 'MongoDB', 'PostgreSQL',
     'Site Reliability Engineering',
   ],
+  nationality: { '@type': 'Country', name: 'Nepal' },
+  birthPlace: { '@type': 'Country', name: 'Nepal' },
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Tribhuvan University',
@@ -61,7 +63,7 @@ const personJsonLd = {
     {
       '@type': 'Occupation',
       name: 'Senior Software Engineer / DevOps Engineer',
-      occupationLocation: { '@type': 'Country', name: 'Nepal' },
+      occupationLocation: { '@type': 'Country', name: 'Australia' },
       description: 'Cloud infrastructure, Kubernetes, CI/CD automation, Flutter mobile development',
     },
   ],
@@ -78,7 +80,7 @@ const websiteJsonLd = {
   '@id': `${SITE_URL}/#website`,
   name: 'Khadga Bahadur Shrestha',
   url: SITE_URL,
-  description: 'Portfolio of Khadga Bahadur Shrestha — Senior DevOps Engineer, Platform Engineer, and Flutter Developer based in Perth, Australia.',
+  description: 'Portfolio of Khadga Bahadur Shrestha — Senior DevOps Engineer, Platform Engineer, and Flutter Developer from Nepal, now based in Perth, Australia.',
   author: { '@id': `${SITE_URL}/#person` },
 };
 
@@ -88,7 +90,7 @@ const profilePageJsonLd = {
   '@id': `${SITE_URL}/#profilepage`,
   name: 'Khadga Bahadur Shrestha — DevOps Engineer & Software Developer',
   url: SITE_URL,
-  description: 'Portfolio and resume of Khadga Bahadur Shrestha, a Senior DevOps Engineer and Software Developer based in Perth, Australia.',
+  description: 'Portfolio and resume of Khadga Bahadur Shrestha, a Senior DevOps Engineer and Software Developer from Nepal, now based in Perth, Australia.',
   mainEntity: { '@id': `${SITE_URL}/#person` },
   isPartOf: { '@id': `${SITE_URL}/#website` },
 };
@@ -146,40 +148,52 @@ export default async function Home() {
       />
 
       <section id="about" className="hero" aria-label="About Khadga Bahadur Shrestha">
+        <div className="hero-bg" aria-hidden="true" />
         <div className="container">
           <div className="hero-badge">
             <span className="status-dot" aria-hidden="true" />
             Available for work
           </div>
-          <p className="hero-label">Khadga Bahadur Shrestha</p>
-          <h1>
-            Senior DevOps Engineer<br />&amp; Software Developer in Perth, Australia
-          </h1>
-          <p className="hero-intro">
-            DevOps Engineer and Software Developer based in Perth, Western Australia with 7+ years
-            of experience designing and operating highly available cloud platforms. At PortPro, I manage
-            infrastructure for 100+ microservices with strict uptime SLAs and reduced deployment time
-            by 60% building fast, reliable CI/CD systems. As a platform engineer, I also handle mobile
-            app releases with crash reporting, manage database migrations and monitoring, and support
-            developers with infrastructure and server tooling.
-            My background as a full-stack developer and Flutter developer (Flutter, React, Node.js) gives
-            me a unique edge&thinsp;&mdash;&thinsp;I build infrastructure from a developer&rsquo;s perspective,
-            ensuring systems are observable, resilient, and easy to operate.
-          </p>
-          <div className="hero-strengths">
-            <h2>Core Strengths</h2>
-            <ul>
-              <li>Platform Engineering &amp; Cloud Architecture (AWS, Kubernetes, Terraform)</li>
-              <li>CI/CD &amp; DevOps Automation (GitHub Actions, Docker, GitOps)</li>
-              <li>Databases &amp; Data Operations (MongoDB, PostgreSQL, Redis, TimescaleDB)</li>
-              <li>Observability, Disaster Recovery &amp; Site Reliability Engineering</li>
-              <li>Mobile App Development (Flutter) &amp; Developer Experience Tooling</li>
-            </ul>
-          </div>
-          <div className="hero-actions">
-            <a href="mailto:khadgalovecoding2016@gmail.com" className="hero-btn-primary">Get in touch</a>
-            <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" className="hero-btn">GitHub</a>
-            <a href="https://linkedin.com/in/kodega" target="_blank" rel="noopener noreferrer" className="hero-btn">LinkedIn</a>
+          <div className="hero-grid">
+            <div className="hero-left">
+              <p className="hero-label">Hi, I&rsquo;m Khadga</p>
+              <h1>
+                I build &amp; operate<br />
+                <span className="hero-accent">cloud platforms</span><br />
+                at scale.
+              </h1>
+              <p className="hero-intro">
+                Senior DevOps Engineer in Perth, Australia with 7+ years shipping resilient infrastructure.
+                I manage 100+ microservices on AWS/Kubernetes at PortPro, cut deploy times by 60%,
+                and build developer tooling that teams actually love.
+              </p>
+              <div className="hero-actions">
+                <a href="mailto:khadgalovecoding2016@gmail.com" className="hero-btn-primary">Get in touch &rarr;</a>
+                <a href="https://github.com/kodega2016" target="_blank" rel="noopener noreferrer" className="hero-btn">GitHub</a>
+                <a href="https://linkedin.com/in/kodega" target="_blank" rel="noopener noreferrer" className="hero-btn">LinkedIn</a>
+              </div>
+            </div>
+            <div className="hero-right">
+              <div className="hero-terminal">
+                <div className="terminal-bar">
+                  <span className="terminal-dot" /><span className="terminal-dot" /><span className="terminal-dot" />
+                  <span className="terminal-title">strengths.sh</span>
+                </div>
+                <div className="terminal-body">
+                  <p className="terminal-line"><span className="t-prompt">$</span> cat core_strengths.yml</p>
+                  <div className="terminal-output">
+                    <p><span className="t-key">platform:</span> AWS, Kubernetes, Terraform</p>
+                    <p><span className="t-key">cicd:</span> GitHub Actions, Docker, GitOps</p>
+                    <p><span className="t-key">data:</span> MongoDB, PostgreSQL, Redis</p>
+                    <p><span className="t-key">sre:</span> Observability, DR, Monitoring</p>
+                    <p><span className="t-key">mobile:</span> Flutter, React Native</p>
+                  </div>
+                  <p className="terminal-line"><span className="t-prompt">$</span> echo $EXPERIENCE</p>
+                  <p className="terminal-result">7+ years &middot; 100+ microservices &middot; 60% faster deploys</p>
+                  <p className="terminal-line terminal-cursor"><span className="t-prompt">$</span></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -340,7 +354,7 @@ export default async function Home() {
           <p className="section-label">Say hello</p>
           <h2 className="section-title">Contact</h2>
           <p className="contact-intro">
-            DevOps Engineer and software developer based in Perth, Western Australia.
+            DevOps Engineer and software developer from Nepal, currently based in Perth, Western Australia.
             Open to DevOps, platform engineering, and software development opportunities in Australia, remote roles, and freelance projects.
           </p>
           <div className="contact-rows">

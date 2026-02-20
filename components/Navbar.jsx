@@ -13,7 +13,7 @@ export default function Navbar() {
   function close() { setOpen(false); }
 
   return (
-    <nav role="navigation" aria-label="Main navigation">
+    <nav role="navigation" aria-label="Main navigation" className="site-nav">
       <div className="nav-inner">
         <Link href="/" className="nav-logo" onClick={close} aria-label="Khadga Bahadur Shrestha — Home"><span className="nav-prompt">&gt;</span>kb</Link>
         <div id="nav-menu" className={`nav-pill ${open ? 'open' : ''}`} role="menubar">

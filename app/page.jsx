@@ -184,123 +184,27 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="experience" className="section" aria-label="Work experience">
+      <section id="experience" className="section" aria-label="Work experience summary">
         <div className="container">
           <p className="section-label">Experience</p>
-          <h2 className="section-title">Where I&rsquo;ve worked</h2>
-          <div className="exp-list">
-
-            <div className="exp-row">
-              <div className="exp-row-left">
-                <h3>Senior Software Engineer / DevOps Engineer</h3>
-                <p className="exp-company">PortPro Pvt. Ltd. &middot; Kathmandu, Nepal</p>
-
-                <h4 className="exp-subhead">Cloud Infrastructure &amp; Architecture</h4>
-                <ul className="exp-bullets">
-                  <li>Architected and automated AWS infrastructure using Terraform modules for VPC, EC2, ECS (Fargate &amp; EC2), App Runner, ALB, and Auto Scaling Groups, managing multi-region deployments</li>
-                  <li>Provisioned, configured, and monitored managed services including Amazon RDS (PostgreSQL), ElastiCache (Redis), and Amazon MQ (RabbitMQ), ensuring high availability and optimal performance</li>
-                  <li>Managed and maintained AWS Elastic Beanstalk and App Runner environments for application deployment, scaling, and lifecycle management</li>
-                  <li>Configured and managed Amazon Route 53 for DNS management, domain routing, health checks, and failover strategies across production environments</li>
-                  <li>Designed high-availability production systems supporting large-scale microservices architecture with strict uptime requirements</li>
-                  <li>Implemented environment segregation across development, staging, and production with secure IAM policies and VPC peering strategies</li>
-                  <li>Performed infrastructure cost optimization through right-sizing, automation, and efficient resource management, significantly reducing cloud expenditure</li>
-                  <li>Deployed and managed containerized applications on Google Cloud Run and Firebase Cloud Functions for scalable and cost-effective service delivery</li>
-                  <li>Worked with Microsoft Azure services including Azure App Service, AKS, Blob Storage, Container Instances, and Virtual Networks for multi-cloud deployments</li>
-                </ul>
-
-                <h4 className="exp-subhead">Containerization &amp; Orchestration</h4>
-                <ul className="exp-bullets">
-                  <li>Built and maintained production Kubernetes clusters with k3d, implementing GitOps workflows using ArgoCD for declarative infrastructure management</li>
-                  <li>Containerized applications using Docker and managed orchestration via Amazon ECS and Kubernetes, optimizing container images for improved build times and deployment efficiency</li>
-                </ul>
-
-                <h4 className="exp-subhead">CI/CD &amp; Deployment Automation</h4>
-                <ul className="exp-bullets">
-                  <li>Designed and maintained comprehensive CI/CD pipelines using GitHub Actions and Jenkins, significantly reducing deployment time and improving reliability</li>
-                  <li>Implemented blue-green and rolling deployment strategies for zero-downtime releases across all production services</li>
-                  <li>Created deployment automation tools and scripts for ECS services, enabling rapid hot-fix release strategies for critical bug resolution</li>
-                </ul>
-
-                <h4 className="exp-subhead">Monitoring, Reliability &amp; Incident Management</h4>
-                <ul className="exp-bullets">
-                  <li>Implemented centralized monitoring using New Relic, AWS CloudWatch, Prometheus, and Grafana, significantly reducing mean time to detection (MTTD)</li>
-                  <li>Conducted root cause analysis for production incidents, creating detailed runbooks and documentation for 24/7 support teams</li>
-                  <li>Maintained high uptime SLA across all critical microservices through proactive monitoring and rapid incident response</li>
-                </ul>
-
-                <h4 className="exp-subhead">Database &amp; Data Operations</h4>
-                <ul className="exp-bullets">
-                  <li>Administered MongoDB Atlas clusters at scale, performing daily monitoring, query optimization, and capacity planning for high-traffic applications</li>
-                  <li>Executed large-scale data migrations of 60 million+ records using custom SQL scripts and batch processing strategies, ensuring zero downtime</li>
-                  <li>Executed complex database migrations using AWS DMS across PostgreSQL, TimescaleDB, and Redis deployments with zero downtime</li>
-                  <li>Performed MongoDB database migrations, backup, and restore operations from MongoDB and PostgreSQL snapshots, ensuring data integrity and recoverability</li>
-                  <li>Designed and executed database schema migrations and structural operations, managing evolving data models across multiple environments</li>
-                  <li>Designed database schemas, implemented indexing strategies, and optimized query performance for improved response times</li>
-                </ul>
-
-                <h4 className="exp-subhead">Disaster Recovery &amp; Business Continuity</h4>
-                <ul className="exp-bullets">
-                  <li>Designed and implemented disaster recovery procedures with strict Recovery Time Objectives (RTO) for critical services, conducting quarterly DR drills</li>
-                  <li>Implemented multi-region redundancy strategies and automated backup solutions for databases and critical applications</li>
-                </ul>
-
-                <h4 className="exp-subhead">Application Development &amp; Mobile Engineering</h4>
-                <ul className="exp-bullets">
-                  <li>Led mobile application design and development using Flutter with Clean Architecture, serving as the lead mobile developer for end-to-end delivery of iOS and Android applications</li>
-                  <li>Coordinated with backend engineering teams to define API contracts, ensure seamless integration, and resolve cross-team technical dependencies</li>
-                  <li>Integrated third-party SDKs including barcode/QR scanners, mapping services, turn-by-turn navigation, push notifications, and analytics platforms</li>
-                  <li>Implemented crash reporting and analysis workflows using monitoring tools, proactively identifying and resolving application stability issues</li>
-                  <li>Managed complete mobile release lifecycle including App Store and Google Play Store submissions, and hot-patch updates using Shorebird</li>
-                  <li>Developed and maintained features for enterprise web applications using React.js, TypeScript, and Node.js with modern state management patterns</li>
-                  <li>Developed and integrated backend services with RESTful APIs, third-party services, and implemented secure authentication using OAuth 2.0 and Firebase Authentication</li>
-                  <li>Managed private Node.js package integration and package storage on GitHub Registry, maintaining internal shared libraries across teams</li>
-                  <li>Wrote comprehensive test cases including unit tests, integration tests, and end-to-end tests; implemented automated test suites in CI/CD pipelines</li>
-                </ul>
-              </div>
-              <span className="exp-row-date">Sep 2021 &ndash; Present</span>
-            </div>
-
-            <div className="exp-row">
-              <div className="exp-row-left">
-                <h3>Mobile Application Architect &amp; Full Stack Developer</h3>
-                <p className="exp-company">Parentiv &middot; Remote</p>
-                <ul className="exp-bullets">
-                  <li>Designed application architecture using Flutter with Clean Architecture patterns and state management solutions for child care management platform serving thousands of users</li>
-                  <li>Architected serverless backend infrastructure using Firebase Cloud Functions, Firestore, and Firebase Authentication, handling real-time data synchronization, offline capabilities, and secure multi-tenant access control</li>
-                  <li>Built administrative web dashboard using React.js, later migrated to Flutter Web for code sharing and cross-platform consistency</li>
-                  <li>Implemented CI/CD pipelines for automated building, testing, and deployment of iOS and Android applications, significantly reducing release cycle time</li>
-                  <li>Optimized application performance achieving fast cold start times and smooth rendering across all supported devices</li>
-                </ul>
-              </div>
-              <span className="exp-row-date">Jan 2019 &ndash; Sep 2021</span>
-            </div>
-
-            <div className="exp-row">
-              <div className="exp-row-left">
-                <h3>Full Stack Developer</h3>
-                <p className="exp-company">Paailatechnologies &middot; Biratnagar, Nepal</p>
-                <ul className="exp-bullets">
-                  <li>Designed and developed RESTful APIs using Laravel framework with optimized MySQL database schemas for job portal and television channel applications</li>
-                  <li>Built cross-platform mobile applications using Flutter integrated with Laravel backend APIs for seamless data synchronization</li>
-                  <li>Managed complete application lifecycle from development to App Store and Google Play Store releases</li>
-                </ul>
-              </div>
-              <span className="exp-row-date">May 2018 &ndash; Oct 2019</span>
-            </div>
-
-            <div className="exp-row">
-              <div className="exp-row-left">
-                <h3>Junior Web Developer</h3>
-                <p className="exp-company">Delta Tech &middot; Biratnagar, Nepal</p>
-                <ul className="exp-bullets">
-                  <li>Developed responsive web applications using HTML5, CSS3, JavaScript, Bootstrap, and backend services using PHP and CodeIgniter framework</li>
-                  <li>Integrated third-party services including Google Sign-In authentication and Google Sheets API for data management</li>
-                  <li>Delivered web solutions for e-commerce platforms and business applications across the complete software development lifecycle</li>
-                </ul>
-              </div>
-              <span className="exp-row-date">Mar 2016 &ndash; May 2018</span>
-            </div>
-
+          <h2 className="section-title">Background</h2>
+          <div className="exp-summary">
+            <p>
+              With 7+ years of professional experience, I&rsquo;ve progressed from web development to
+              senior DevOps and platform engineering roles. Currently at <strong>PortPro</strong>, I manage
+              cloud infrastructure for 100+ microservices on AWS, run Kubernetes clusters with GitOps
+              workflows, and build CI/CD pipelines that cut deployment time by 60%.
+            </p>
+            <p>
+              Previously, I architected a Flutter-based child care platform at <strong>Parentiv</strong> with
+              a serverless Firebase backend, and built full-stack web and mobile applications at
+              <strong> Paailatechnologies</strong> and <strong>Delta Tech</strong> in Nepal.
+            </p>
+            <p>
+              My dual background in infrastructure and application development lets me bridge the gap
+              between ops and engineering&thinsp;&mdash;&thinsp;building systems that are observable,
+              resilient, and developer-friendly.
+            </p>
           </div>
         </div>
       </section>

@@ -235,60 +235,13 @@ nav {
   line-height: 1.7; margin-bottom: 14px;
 }
 
-/* ── Experience (timeline) ── */
-.exp-list {
-  display: flex; flex-direction: column; gap: 0;
-  padding-left: 28px;
-  border-left: 1px solid var(--line);
-  margin-left: 4px;
+/* ── Experience summary ── */
+.exp-summary { max-width: 620px; }
+.exp-summary p {
+  font-size: 15px; color: var(--text-2); line-height: 1.75; margin-bottom: 14px;
 }
-
-.exp-row {
-  position: relative;
-  display: flex; flex-direction: column;
-  padding-bottom: 36px;
-}
-.exp-row:last-child { padding-bottom: 0; }
-
-.exp-row::before {
-  content: '';
-  position: absolute;
-  left: -33px; top: 5px;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--line);
-  transition: border-color 0.2s ease;
-}
-.exp-row:first-child::before {
-  border-color: var(--accent);
-  background: var(--accent);
-}
-
-.exp-row-date {
-  order: -1;
-  font-family: var(--mono);
-  font-size: 12px; color: var(--text-3);
-  margin-bottom: 6px;
-  flex-shrink: 0; white-space: nowrap;
-}
-
-.exp-row-left h3 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
-.exp-row-left .exp-company { font-size: 14px; color: var(--text-2); margin: 0 0 10px; }
-.exp-subhead {
-  font-size: 13px; font-weight: 600; color: var(--text);
-  margin: 14px 0 6px; font-style: italic;
-}
-.exp-row-left .exp-company + .exp-subhead { margin-top: 4px; }
-.exp-bullets { list-style: none; margin: 0; padding: 0; }
-.exp-bullets li {
-  font-size: 13px; color: var(--text-2); line-height: 1.65;
-  padding-left: 14px; position: relative; margin-bottom: 4px;
-}
-.exp-bullets li::before {
-  content: ''; position: absolute; left: 0; top: 8px;
-  width: 4px; height: 4px; border-radius: 50%; background: var(--text-3);
-}
+.exp-summary p:last-child { margin-bottom: 0; }
+.exp-summary strong { color: var(--text); font-weight: 600; }
 
 /* ── Projects (cards) ── */
 .project-grid { display: flex; flex-direction: column; gap: 12px; }
@@ -672,9 +625,7 @@ footer a:hover { color: var(--text); text-decoration: none; }
   .rec-grid { grid-template-columns: 1fr; }
   .rec-card { padding: 20px; }
   .rec-card p { font-size: 15px; }
-  .exp-list { padding-left: 20px; }
-  .exp-row::before { left: -25px; width: 8px; height: 8px; }
-  .exp-bullets li { font-size: 14px; }
+  .exp-summary p { font-size: 16px; }
   .skills-columns { grid-template-columns: 1fr 1fr; }
   .skill-group ul li { font-size: 15px; }
   .cert-list { grid-template-columns: 1fr; }
